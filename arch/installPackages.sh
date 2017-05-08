@@ -7,5 +7,5 @@ sudo pacman -Syu
 sudo pacman -Sy --needed --noconfirm neovim redshift wget curl git filezilla
 
 ##### Install Packages through pacaur #####
-pacaur -Sy --needed --noconfirm --noedit deepin-screenshot sublime-text-dev veracrypt acroread armory-bin kompare-git smartgit qmplay2 bitcoin-core
+pacaur -Sy --needed --noconfirm --noedit deepin-screenshot sublime-text-dev veracrypt acroread armory-bin kompare-git smartgit qmplay2 bitcoin-core minergate
 
