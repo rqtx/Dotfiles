@@ -4,6 +4,7 @@
 sudo cp ../config/arch/pacman.conf /etc/
 sudo pacman-mirrors -g
 sudo pacman -Syy
+sudo pacman -S archlinux-keyring
 sudo pacman -Syu
 
 ##### pacaur install #####
