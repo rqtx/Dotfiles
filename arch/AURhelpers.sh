@@ -2,6 +2,8 @@
 
 ##### yaourt install ####
 sudo cp ../config/arch/pacman.conf /etc/
+sudo pacman-mirrors -g
+sudo pacman -Syy
 sudo pacman -Syu
 
 ##### pacaur install #####
