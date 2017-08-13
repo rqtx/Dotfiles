@@ -17,7 +17,7 @@ cd /tmp/pacaur_install
 sudo pacman -S binutils make gcc fakeroot --noconfirm --needed
 
 # Install pacaur dependencies from arch repos
-sudo pacman -S expac yajl git --noconfirm --needed
+sudo pacman -S expac yajl git cower --noconfirm --needed
 
 # Install "pacaur" from AUR
 if [ ! -n "$(pacman -Qs pacaur)" ]; then
