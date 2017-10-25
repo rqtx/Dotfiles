@@ -14,7 +14,7 @@ echo "==> Checking for system updates..."
 sudo pacman -Syu
 
 ##### Install Packages through pacman #####
-sudo pacman -S --needed --noconfirm neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-develsudo cmake
+sudo pacman -S --needed --noconfirm neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-develsudo cmake ibus
 
 ##### Install Packages through pacaur #####
 
