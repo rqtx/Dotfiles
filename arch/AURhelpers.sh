@@ -1,10 +1,7 @@
-#!/bin/bash
+#/bin/bash
 
 ##### yaourt install ####
-sudo cp ../config/arch/pacman.conf /etc/
-sudo pacman-mirrors -g
-sudo pacman -S archlinux-keyring
-sudo pacman -Syu
+#Already on pacman.conf
 
 ##### pacaur install #####
 
