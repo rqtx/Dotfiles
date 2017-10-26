@@ -3,9 +3,10 @@
 echo "==> Moving configuration files..."
 sudo cp config/arch/i3-sensible-terminal /usr/bin/
 cp config/arch/configi3 ~/.i3/config
+mkdir ~/.config/termite/
 cp config/arch/configTermite ~/.config/termite/config
 cp config/arch/tmux.conf ~/.tmux.conf
-cp config/arch/pacman.conf /etc/
+sudo cp config/arch/pacman.conf /etc/
 cp config/arch/Xresources ~/.Xresources
 echo "done"
 
