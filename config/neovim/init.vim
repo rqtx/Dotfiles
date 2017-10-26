@@ -1,7 +1,8 @@
-""""""" Common vim setup """"""
+"""""" Common vim setup """"""
 syntax enable
+set background=dark
 set number
-set shiftwidth=4
+set shiftwidth=2
 set hidden
 set cursorline		      "underline the current line
 set nobackup
@@ -9,12 +10,43 @@ set nowritebackup
 set t_Co=256
 let mapleader = "/"
 
+"Key map to save existing files
+command -nargs=0 -bar Update if &modified 
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <C-S> :Update<CR>
+vnoremap <C-S> <C-C>:Update<CR>
+inoremap <C-S> <C-O>:Update<CR>
+nnoremap <C-D> :Update<CR>
+inoremap <C-D> <Esc>:Update<CR>
+vnoremap <C-D> <Esc>:Update<CR>
+
+"Key map to find word
+nnoremap <C-F> :/
+inoremap <C-F> <Esc>:/
+vnoremap <C-F> <Esc>:/
+
+nnoremap <C-T> *
+inoremap <C-T> <Esc>*
+vnoremap <C-T> <Esc>*
+
+"Find and Replace
+nnoremap <C-R> :%s/\<\>//gc
+inoremap <C-R> <Esc>:%s/\<\>//gc
+vnoremap <C-R> <Esc>:%s/\<\>//gc
+
+
 call plug#begin('~/.local/shared/nvim/plugged')
 """"" Common """""
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'whatyouhide/vim-gotham'
 
 """"" Common coding plugins """""
 Plug 'scrooloose/syntastic'
@@ -24,7 +56,7 @@ Plug 'joequery/Stupid-EasyMotion'
 
 call plug#end()
 
-""""""" Functions """"""
+""""""" General Functions """"""
 " use Ctrl+L to toggle the line number counting method
 function! g:ToggleNuMode()
   if &nu == 1
@@ -47,8 +79,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 """"""" Vim Airline """""""
 set laststatus=2
-let g:airline_theme='dark_minimal'
-let g:airline_solarized_bg='dark'
+let g:airline_theme='gotham'
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 let g:airline#extensions#tabline#enabled = 1
@@ -94,6 +125,6 @@ nmap <F8> :TagbarToggle<CR>
 
 """"""" Stupid-EasyMotion """""""
 " Easymotion shortcut
-nmap <C-W> <leader><leader>w
-nmap <C-Q> <leader><leader>W
-nmap <C-F> <leader><leader>f
+nmap <C-W> <Esc><leader><leader>w
+nmap <C-E> <Esc><leader><leader>W
+nmap <C-Q> <Esc><leader><leader>f
