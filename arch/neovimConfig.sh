@@ -40,7 +40,7 @@ mkdir -p ~/.config/fontconfig/conf.d
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 ### python support ###
-pip3 install --user neovimpip install neovim
+pip3 install --user neovim
 
 
 
