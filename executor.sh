@@ -13,7 +13,7 @@ echo "done"
 xrdb -merge ~/.Xresources
 
 echo "==> Updating Mirror list..."
-sudo pacman-mirror -g
+sudo pacman-mirrors -g
 echo "done"
 
 echo "==> Updating Archlinux keyring..."
