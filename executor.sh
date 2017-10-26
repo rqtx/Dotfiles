@@ -6,7 +6,10 @@ cp config/arch/configi3 ~/.i3/config
 cp config/arch/configTermite ~/.config/termite/config
 cp config/arch/tmux.conf ~/.tmux.conf
 cp config/arch/pacman.conf /etc/
+cp config/arch/Xresources ~/.Xresources
 echo "done"
+
+xrdb -merge ~/.Xresources
 
 echo "==> Updating Mirror list..."
 sudo pacman-mirror -g
