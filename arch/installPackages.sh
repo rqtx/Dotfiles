@@ -3,7 +3,7 @@ echo "==> Mirror list"
 sudo pacman-mirrors -g 
 
 echo "==> Archlinux keyring"
-sudo pacman -S archlinux-keyring && sudo pacman -Syu
+sudo pacman -S --needed --noconfirm archlinux-keyring
 
 
 echo "==> Adding GPG keys"
@@ -11,7 +11,7 @@ gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
 echo "	-> ncurses5-compat-libs GPG key added"
 
 echo "==> Checking for system updates..."
-sudo pacman -Syu
+sudo pacman -Syu --needed --noconfirm
 
 ##### Install Packages through pacman #####
 sudo pacman -S --needed --noconfirm neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-develsudo cmake ibus
