@@ -1,4 +1,3 @@
-#urxvt*font:             xft:Terminus:size=10
 urxvt*font:             xft:Droid Sans Mono for Powerline:size=10
 urxvt*termName:         rxvt
 urxvt*background:       #0a0f14
@@ -8,14 +7,11 @@ urxvt*perl-lib:         /usr/lib/urxvt/perl/
 urxvt*perl-ext-common:  default,matcher
 urxvt*urlLauncher:      /usr/bin/jumanji
 urxvt*matcher.button:   1
-#urxvt*fading:           50
-#urxvt*fadeColor:        #000000
 
 Xft*dpi:                96
 Xft*antialias:          true
 Xft*hinting:            full
 
-#urxvt*background:       rgba:0000/0000/0000/cccc
 
 URxvt.transparent:   false
 URxvt.tintColor:     white
