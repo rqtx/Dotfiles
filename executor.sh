@@ -13,11 +13,11 @@ echo "done"
 xrdb -merge ~/.Xresources
 
 echo "==> Updating Mirror list..."
-sudo pacman-mirrors -g
+sudo pacman-mirrors -g --needed --noconfirm
 echo "done"
 
 echo "==> Updating Archlinux keyring..."
-sudo pacman -S archlinux-keyring
+sudo pacman -S --needed --noconfirm archlinux-keyring 
 echo "done"
 
 echo "==> Adding  GPG keys..."
@@ -25,7 +25,7 @@ gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
 echo "	-> ncurses5-compat-libs GPG key added"
 
 echo "==> Checking for system updates..."
-sudo pacman -Syu
+sudo pacman -Syu --needed --noconfirm
 echo "done"
 
 echo "==> Installing AURhelpers..."
