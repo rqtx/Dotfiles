@@ -4,14 +4,13 @@ echo "==> Moving configuration files..."
 sudo cp config/arch/i3-sensible-terminal /usr/bin/
 cp config/arch/configi3 ~/.i3/config
 cp config/neovim/init.vim ~/.config/nvim/
+cp config/arch/compton.conf ~/.config/
 mkdir ~/.config/termite/
 cp config/arch/configTermite ~/.config/termite/config
 cp config/arch/tmux.conf ~/.tmux.conf
 sudo cp config/arch/pacman.conf /etc/
-cp config/arch/Xresources ~/.Xresources
 echo "done"
 
-xrdb -merge ~/.Xresources
 
 echo "==> Updating Mirror list..."
 sudo pacman-mirrors -g --needed --noconfirm
