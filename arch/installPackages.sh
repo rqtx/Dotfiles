@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "==> Archlinux keyring"
-sudo pacman -S --needed --noconfirm archlinux-keyring
-
 echo "==> Adding GPG keys"
 gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
 echo "	-> ncurses5-compat-libs GPG key added"
