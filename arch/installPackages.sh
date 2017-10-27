@@ -5,24 +5,23 @@ gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
 echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
-echo "==> Checking for system updates..."
-sudo pacman -Syu --needed --noconfirm
-
-##### Install Packages through pacman #####
+echo "==> Install Packages through pacman"
 sudo pacman -S --needed neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-develsudo cmake ibus
+echo "done"
 
-##### Install Packages through pacaur #####
-
+echo "==> Install Packages through pacaur"
 # Check if "pacaur" is installed
 if [ ! -n "$(pacman -Qs pacaur)" ]; then
 	sh ./AURhelpers.sh
 fi
 
 pacaur -S --needed --noedit deepin-screenshot sublime-text-dev veracrypt acroread armory-bin kompare-git gitkraken qmplay2 bitcoin-core cppcheck ctags python-pip ncurses5-compat-libs 
+echo "done"
 
-##### Extra #####
+echo "==> Installing Extra"
 sudo pip install cmakelint
 sudo pip install bandit
 sudo pip install jedi
 sudo npm install -g jsonlint
 sudo npm install -g textlint-rule-ginger
+echo "done"
