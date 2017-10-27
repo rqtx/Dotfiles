@@ -5,7 +5,7 @@
 #	cd ~/.vim/bundle/YouCompleteMe
 #	./install.py --clang-completer
 #######
-#sudo pip install neovim
+
 mkdir ~/.config/nvim
 cp ../config/neovim/init.vim ~/.config/nvim/init.vim
 
