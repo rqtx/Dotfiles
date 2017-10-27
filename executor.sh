@@ -39,4 +39,4 @@ echo "done"
 
 echo "Neovim configuration"
 sh ./arch/neovimConfig.sh
-echo"done"
+echo "done"
