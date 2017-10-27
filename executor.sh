@@ -11,9 +11,12 @@ cp config/arch/tmux.conf ~/.tmux.conf
 sudo cp config/arch/pacman.conf /etc/
 echo "done"
 
+echo "==> Checking for system updates..."
+sudo pacman -Syu --needed --noconfirm
+echo "done"
 
 echo "==> Updating Mirror list..."
-sudo pacman-mirrors -g --needed --noconfirm
+sudo pacman-mirrors -g
 echo "done"
 
 echo "==> Archlinux keyring"
