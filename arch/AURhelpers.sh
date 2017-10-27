@@ -11,10 +11,10 @@ cd /tmp/pacaur_install
 
 # If you didn't install the "base-devel" group,
 # we'll need those.
-sudo pacman -S binutils make gcc fakeroot --noconfirm --needed
+sudo pacman -S binutils make gcc fakeroot --needed
 
 # Install pacaur dependencies from arch repos
-sudo pacman -S expac yajl git cower --noconfirm --needed
+sudo pacman -S expac yajl git cower --needed
 
 # Install "pacaur" from AUR
 if [ ! -n "$(pacman -Qs pacaur)" ]; then
