@@ -1,4 +1,4 @@
-i#!bin/bash
+#!bin/bash
 
 echo "==> Moving configuration files..."
 sudo cp config/arch/i3-sensible-terminal /usr/bin/
