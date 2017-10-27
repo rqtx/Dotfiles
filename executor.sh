@@ -17,6 +17,10 @@ echo "==> Updating Mirror list..."
 sudo pacman-mirrors -g --needed --noconfirm
 echo "done"
 
+echo "==> Archlinux keyring"
+sudo pacman -S --needed --noconfirm archlinux-keyring
+echo "done"
+
 echo "==> Checking for system updates..."
 sudo pacman -Syu --needed --noconfirm
 echo "done"
