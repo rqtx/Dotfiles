@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-sudo pacman -S --needed neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-develsudo cmake ibus
+sudo pacman -S --needed neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-devel cmake ibus
 echo "done"
 
 echo "==> Install Packages through pacaur"
@@ -15,7 +15,7 @@ if [ ! -n "$(pacman -Qs pacaur)" ]; then
 	sh ./AURhelpers.sh
 fi
 
-pacaur -S --needed --noedit deepin-screenshot sublime-text-dev veracrypt acroread armory-bin kompare-git gitkraken qmplay2 bitcoin-core cppcheck ctags python-pip ncurses5-compat-libs 
+pacaur -S --needed --noedit deepin-screenshot sublime-text-dev veracrypt acroread armory-bin kompare-git gitkraken qmplay2 bitcoin-core cppcheck ctags python-pip ncurses5-compat-libs npm 
 echo "done"
 
 echo "==> Installing Extra"
