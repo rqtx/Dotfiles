@@ -26,14 +26,15 @@ echo "==> Checking for system updates..."
 sudo pacman -Syu --needed --noconfirm
 echo "done"
 
+cd arch
 echo "==> Installing AURhelpers..."
-sh ./arch/AURhelpers.sh
+sh ./AURhelpers.sh
 echo "done"
 
 echo "Installing Packages..."
-sh ./arch/installPackages.sh
+sh ./installPackages.sh
 echo "done"
 
 echo "Neovim configuration"
-sh ./arch/neovimConfig.sh
+sh ./neovimConfig.sh
 echo "done"
