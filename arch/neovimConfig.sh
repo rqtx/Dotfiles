@@ -7,7 +7,7 @@
 #######
 
 mkdir ~/.config/nvim
-cp ../config/neovim/init.vim ~/.config/nvim/init.vim
+cp ../config/neovim/init.vim ~/.config/nvim/
 
 ###Required dirs
 cd ~/.vim
