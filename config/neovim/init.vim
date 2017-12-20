@@ -2,13 +2,40 @@
 syntax enable
 set background=dark
 set number
-set shiftwidth=2
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set smartindent
 set hidden
 set cursorline		      "underline the current line
 set nobackup
 set nowritebackup
 set t_Co=256
 let mapleader = "/"
+let g:loaded_matchparen=1
+set clipboard=unnamed
+
+"Skeletons
+autocmd BufNewFile *.c r ~/Skeletons/cpp.skeleton 
+autocmd BufNewFile *.cpp r ~/Skeletons/cpp.skeleton 
+autocmd BufNewFile *.h r ~/Skeletons/h.skeleton
+autocmd BufNewFile *.hpp r ~/Skeletons/h.skeleton
+
+"Key map undo
+nnoremap <C-z> :u<CR>
+vnoremap <C-z> <Esc>:u<CR>
+inoremap <C-z> <Esc>:u<CR>
+
+"Key map copy nad paste
+inoremap <C-v> <ESC>"+pa
+vnoremap <C-c> "+y
+vnoremap <C-x> "+d
+
+"Key map jump to the matchparen 
+noremap % v%
+
+"Key map exit
+nnoremap <C-k> :q<CR>
+vnoremap <C-k> <Esc>:q<CR>
+inoremap <C-k> <Esc>:q<CR>
 
 "Key map to save existing files
 command -nargs=0 -bar Update if &modified 
@@ -34,12 +61,12 @@ nnoremap <C-T> *
 inoremap <C-T> <Esc>*
 vnoremap <C-T> <Esc>*
 
-"Find and Replace
+"Key map find and Replace
 nnoremap <C-R> :%s/\<\>//gc
 inoremap <C-R> <Esc>:%s/\<\>//gc
 vnoremap <C-R> <Esc>:%s/\<\>//gc
 
-
+"VimPlug
 call plug#begin('~/.local/shared/nvim/plugged')
 """"" Common """""
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -47,6 +74,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
+Plug 'kien/ctrlp.vim'
 
 """"" Common coding plugins """""
 Plug 'scrooloose/syntastic'
@@ -100,8 +128,14 @@ let g:airline_powerline_fonts = 1
   nmap <leader>7 <Plug>AirlineSelectTab7
   nmap <leader>8 <Plug>AirlineSelectTab8
   nmap <leader>9 <Plug>AirlineSelectTab9
-  nmap <Tab> <Plug>AirlineSelectNextTab
-  nmap <A-Tab> <Plug>AirlineSelectPrevTab
+  nmap <A-]> <Plug>AirlineSelectNextTab
+  nmap <A-[> <Plug>AirlineSelectPrevTab
+  imap <A-]> <Esc><Plug>AirlineSelectNextTab
+  imap <A-[> <Esc><Plug>AirlineSelectPrevTab
+  nmap <A-TAB> <Plug>AirlineSelectNextTab
+  imap <A-TAB> <Esc><Plug>AirlineSelectNextTab
+
+
 
 """"""" Syntastic """""""
 set statusline+=%#warningmsg#
@@ -125,6 +159,15 @@ nmap <F8> :TagbarToggle<CR>
 
 """"""" Stupid-EasyMotion """""""
 " Easymotion shortcut
+imap <C-W> <C-o><leader><leader>w
 nmap <C-W> <Esc><leader><leader>w
+vmap <C-W> <Esc><leader><leader>w
+imap <C-E> <C-o><leader><leader>W
 nmap <C-E> <Esc><leader><leader>W
+vmap <C-E> <Esc><leader><leader>W
+imap <C-Q> <C-o><leader><leader>f
 nmap <C-Q> <Esc><leader><leader>f
+vmap <C-Q> <Esc><leader><leader>f
+
+""""""" Python Configuration """""""
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
