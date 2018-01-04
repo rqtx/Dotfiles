@@ -18,6 +18,7 @@ autocmd BufNewFile *.c r ~/Skeletons/cpp.skeleton
 autocmd BufNewFile *.cpp r ~/Skeletons/cpp.skeleton 
 autocmd BufNewFile *.h r ~/Skeletons/h.skeleton
 autocmd BufNewFile *.hpp r ~/Skeletons/h.skeleton
+autocmd BufNewFile *.txt r ~/Skeletons/txt.skeleton
 
 "Key map undo
 nnoremap <C-z> :u<CR>
@@ -33,9 +34,9 @@ vnoremap <C-x> "+d
 noremap % v%
 
 "Key map exit
-nnoremap <C-k> :q<CR>
-vnoremap <C-k> <Esc>:q<CR>
-inoremap <C-k> <Esc>:q<CR>
+nnoremap <C-e> :q<CR>
+vnoremap <C-e> <Esc>:q<CR>
+inoremap <C-e> <Esc>:q<CR>
 
 "Key map to save existing files
 command -nargs=0 -bar Update if &modified 
@@ -75,6 +76,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
 Plug 'kien/ctrlp.vim'
+"Plug 'breuckelen/vim-resize'
 
 """"" Common coding plugins """""
 Plug 'scrooloose/syntastic'
@@ -159,15 +161,15 @@ nmap <F8> :TagbarToggle<CR>
 
 """"""" Stupid-EasyMotion """""""
 " Easymotion shortcut
-imap <C-W> <C-o><leader><leader>w
-nmap <C-W> <Esc><leader><leader>w
-vmap <C-W> <Esc><leader><leader>w
-imap <C-E> <C-o><leader><leader>W
-nmap <C-E> <Esc><leader><leader>W
-vmap <C-E> <Esc><leader><leader>W
-imap <C-Q> <C-o><leader><leader>f
-nmap <C-Q> <Esc><leader><leader>f
-vmap <C-Q> <Esc><leader><leader>f
+imap <C-K> <C-o><leader><leader>w
+nmap <C-K> <Esc><leader><leader>w
+vmap <C-K> <Esc><leader><leader>w
+imap <C-J> <C-o><leader><leader>W
+nmap <C-J> <Esc><leader><leader>W
+vmap <C-J> <Esc><leader><leader>W
+imap <C-H> <C-o><leader><leader>f
+nmap <C-H> <Esc><leader><leader>f
+vmap <C-H> <Esc><leader><leader>f
 
 """"""" Python Configuration """""""
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
