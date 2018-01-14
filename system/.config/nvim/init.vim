@@ -91,11 +91,11 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Skeletons
 """""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile *.c r ~/Skeletons/cpp.skeleton 
-autocmd BufNewFile *.cpp r ~/Skeletons/cpp.skeleton 
-autocmd BufNewFile *.h r ~/Skeletons/h.skeleton
-autocmd BufNewFile *.hpp r ~/Skeletons/h.skeleton
-autocmd BufNewFile *.txt r ~/Skeletons/txt.skeleton
+autocmd BufNewFile *.c r ~/.config/nvim/Skeletons/cpp.skeleton 
+autocmd BufNewFile *.cpp r ~/.config/nvim/Skeletons/cpp.skeleton 
+autocmd BufNewFile *.h r ~/.config/nvim/Skeletons/h.skeleton
+autocmd BufNewFile *.hpp r ~/.config/nvim/Skeletons/h.skeleton
+autocmd BufNewFile *.txt r ~/.config/nvim/Skeletons/txt.skeleton
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Key maps
