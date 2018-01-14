@@ -159,7 +159,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
 Plug 'kien/ctrlp.vim'
-"Plug 'breuckelen/vim-resize'
+Plug 'terryma/vim-multiple-cursors'
 
 """"" Common coding plugins """""
 Plug 'scrooloose/syntastic'
@@ -250,6 +250,16 @@ let g:syntastic_markdown_checkers = ['textlint']
 " Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"Vim-multiple-cursors
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let g:multi_cursor_use_default_mapping=0
+
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-b>'
+let g:multi_cursor_skip_key='<C-g>'
+let g:multi_cursor_quit_key='<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Stupid-EasyMotion

@@ -1,0 +1,14 @@
+# Git
+alias ghelper="echo -e '\nga   : git add                         ( adicionar arquivos à staging area )\ngc   : git commit                      ( salvar alterações )\ngca  : git commit --amend              ( alterar último commit )\ngd   : git diff -b HEAD [arquivos]     ( diff em relação ao último commit )\ngds  : git diff -b [arquivos]          ( diff em relação à staging area )\ngl   : git log --graph --pretty=format ( vizualização dos últimos commits )\ngrh  : git checkout HEAD [arquivos]    ( undo das modificações em relação ao HEAD )\ngrs  : git reset [arquivos]            ( remove da staging area, mantendo alterações )\ngru  : git checkout [arquivos]         ( undo das modificações em relação à staging area )\ngs   : git status                      ( lista quais arquivos estão dentro e fora da staging area )\n\ngr   : help dos alias relacionados ao git reset/checkout\ngnah : reset & clean\n'"
+alias gnah="git reset --hard && git clean -df"
+alias gr="echo -e 'grh : undo das modificações em relacao ao HEAD\ngru : undo das modificações em relacao a staging area\ngrs : remove da staging area'"
+alias grh="git checkout HEAD $@" # undo das modificações em relacao a HEAD
+alias gru="git checkout $@"      # undo das modificações em relacao a staging area
+alias grs="git reset $@"         # remove da staging area
+alias gs="git status"
+alias ga="git add $@"
+alias gd="git diff -b HEAD $@"  # diff em relação a HEAD
+alias gds="git diff -b $@"      # diff em relação a staging area
+alias gc="git commit $@"
+alias gca="git commit --amend $@"
+alias gl="git log --graph --decorate=auto --pretty=format:'%C(yellow)%h%Creset %Cblue%cn%Creset %s%Cred%d %Cgreen%cr.%Creset' $@"
