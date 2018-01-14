@@ -2,8 +2,8 @@
 # ~/.bashrc
 #
 
-#export VISUAL=nvim
-#export EDITOR= $VISUAL
+export VISUAL=nvim
+export EDITOR= $VISUAL
 
 [[ $- != *i* ]] && return
 

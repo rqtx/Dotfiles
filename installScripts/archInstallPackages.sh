@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-sudo pacman -S --needed neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-devel cmake ibus xclip
+sudo pacman -S --needed neovim redshift wget curl git filezilla ibus pulseaudio pavucontrol p7zip tmux termite base-devel cmake ibus xclip stow
 echo "done"
 
 echo "==> Install Packages through pacaur"
