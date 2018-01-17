@@ -37,6 +37,10 @@ hi MatchParen ctermbg=blue  guibg=lightblue
 
 set wildmenu	    " visual autocomplete for command menu
 
+if &diff                             " only for diff mode/vimdiff
+  set diffopt=filler,context:1000000 " filler is default and inserts empty lines for sync
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Backups, Swap Files
 """""""""""""""""""""""""""""""""""""""""""""""""
