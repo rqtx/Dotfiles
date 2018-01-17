@@ -5,6 +5,8 @@ let mapleader = "/"
 
 set clipboard=unnamed
 
+set updatetime=250
+
 " Automatically update a file if it is changed externally
 set autoread
 
@@ -153,6 +155,21 @@ inoremap <C-R> <Esc>:%s/\<\>//gc
 vnoremap <C-R> <Esc>:%s/\<\>//gc
 
 """""""""""""""""""""""""""""""""""""""""""""""""
+" General Functions
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" use Ctrl+L to toggle the line number counting method
+function! g:ToggleNuMode()
+  if &nu == 1
+     set rnu
+     set nonu
+  else
+     set nu
+     set nornu
+  endif
+endfunction
+nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
 "VimPlug
 """""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/shared/nvim/plugged')
@@ -170,23 +187,9 @@ Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
 Plug 'joequery/Stupid-EasyMotion'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" General Functions
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" use Ctrl+L to toggle the line number counting method
-function! g:ToggleNuMode()
-  if &nu == 1
-     set rnu
-     set nonu
-  else
-     set nu
-     set nornu
-  endif
-endfunction
-nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " NerdTree configuration
@@ -230,6 +233,15 @@ let g:airline_powerline_fonts = 1
   nmap <A-TAB> <Plug>AirlineSelectNextTab
   imap <A-TAB> <Esc><Plug>AirlineSelectNextTab
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"Vim-multiple-cursors
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let g:multi_cursor_use_default_mapping=0
+
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-b>'
+let g:multi_cursor_skip_key='<C-g>'
+let g:multi_cursor_quit_key='<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
@@ -256,16 +268,6 @@ let g:syntastic_markdown_checkers = ['textlint']
 nmap <F8> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""
-"Vim-multiple-cursors
-"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_use_default_mapping=0
-
-let g:multi_cursor_next_key='<C-m>'
-let g:multi_cursor_prev_key='<C-b>'
-let g:multi_cursor_skip_key='<C-g>'
-let g:multi_cursor_quit_key='<Esc>'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""
 " Stupid-EasyMotion
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Easymotion shortcut
@@ -278,6 +280,11 @@ vmap <C-J> <Esc><leader><leader>W
 imap <C-H> <C-o><leader><leader>f
 nmap <C-H> <Esc><leader><leader>f
 vmap <C-H> <Esc><leader><leader>f
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-gitgutter
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gitgutter_max_signs = 1000
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Python Configuration
