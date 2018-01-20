@@ -1,0 +1,6 @@
+Host github.com
+        User rqtx
+        Hostname github.com
+        PreferredAuthentications publickey
+        IdentityFile /home/blackbird/.ssh/rqtxGit
+  
