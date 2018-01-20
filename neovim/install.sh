@@ -8,9 +8,9 @@
 #######
 
 mkdir ~/.config/nvim
-cp ../config/neovim/init.vim ~/.config/nvim/
+stow -t ~/.config/nvim nvim
 
-###Required dirs
+###Vim Required dirs
 cd ~/.vim
 mkdir tmp
 cd tmp/

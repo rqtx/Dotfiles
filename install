@@ -1,0 +1,46 @@
+#!/bin/bash
+
+archDir=("installScripts")
+configDir=( "archConfig"
+            "bash"
+            "bin"
+            "compton"
+            "git"
+            "i3"
+            "neovim"
+            "termite"
+            "tmux"
+            "X"
+)
+
+echo "==> Checking for system updates..."
+sudo pacman -Syu --needed --noconfirm
+
+echo "==> Updating Mirror list..."
+sudo pacman-mirrors -g
+
+echo "==> Archlinux keyring"
+sudo pacman -S --needed --noconfirm archlinux-keyring
+sudo pacman -Syu --needed --noconfirm
+
+echo "==> Installing Packages"
+for i in "${archDir[@]}"
+do
+  echo "Entering in directory $i"
+  cd $i
+  sh ./install.sh
+  cd ..
+  echo "Leaving directory $i"
+done
+
+echo "==> Stow"
+for i in "${configDir[@]}"
+do
+  echo "Entering in directory $i"
+  cd $i
+  sh ./install.sh
+  cd ..
+  echo "Leaving directory $i"
+done
+
+echo "DONE"
