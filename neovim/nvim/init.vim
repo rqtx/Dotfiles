@@ -3,6 +3,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = "/"
 
+colorscheme gotham
+
 set clipboard=unnamed
 
 set updatetime=250
@@ -41,6 +43,7 @@ set wildmenu	    " visual autocomplete for command menu
 
 if &diff                             " only for diff mode/vimdiff
   set diffopt=filler,context:1000000 " filler is default and inserts empty lines for sync
+  colorscheme skittles_dark
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -172,6 +175,12 @@ nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""
 "VimPlug
 """""""""""""""""""""""""""""""""""""""""""""""""
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.local/shared/nvim/plugged')
 """"" Common """""
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }

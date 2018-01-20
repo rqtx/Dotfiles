@@ -11,13 +11,9 @@ mkdir ~/.config/nvim
 stow -t ~/.config/nvim nvim
 
 ###Vim Required dirs
-cd ~/.vim
-mkdir tmp
-cd tmp/
-mkdir swap
-mkdir undo
-mkdir backup
-cd
+mkdir -p ~/.vim/tmp/swap
+mkdir -p ~/.vim/tmp/undo
+mkdir -p ~/.vim/tmp/backup
 
 ###install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
