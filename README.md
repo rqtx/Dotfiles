@@ -1,2 +1,2 @@
 # Dotfiles
-My arch install scripts
+My config files
