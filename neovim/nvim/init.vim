@@ -5,12 +5,19 @@ if filereadable(expand("\~/.config/nvim/.vim/general.vim"))
   source \~/.config/nvim/.vim/general.vim
 endif
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Visual
 """""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("\~/.config/nvim/.vim/visual.vim"))
   source \~/.config/nvim/.vim/visual.vim
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""
+if filereadable(expand("\~/.config/nvim/.vim/spelling.vim"))
+  "To add more skeletons edit skeletons.vim file
+  source \~/.config/nvim/.vim/spelling.vim
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""
