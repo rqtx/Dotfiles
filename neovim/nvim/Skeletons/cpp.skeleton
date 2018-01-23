@@ -1,9 +1,8 @@
-/* ------------------------------------------------------------------------ *
- * file:                                                              	    *
- * purpose:                                               							    *
- * author:  Igor Fernandes Miranda                                          *
- * date:		                                       						    *
- * ------------------------------------------------------------------------ */
+/* 
+ * file:                                                              	    
+ * purpose:                                               		    
+ * Maintained by:  Igor Fernandes Miranda <igormiranda5@gmail.com>          
+ */
 
 
 int main(int argc, char *argv[]){
