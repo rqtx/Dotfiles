@@ -61,6 +61,9 @@ imap <C-space> <Esc>
 nnoremap <Leader>a i
 imap <Leader>a <Esc>
 
+" Toggle Spelling
+nnoremap <silent> <leader>s :set spell!<cr>
+
 " use Ctrl+L to toggle the line number counting method
 function! g:ToggleNuMode()
   if &nu == 1
