@@ -13,7 +13,7 @@ configDir=( "archConfig"
             "X"
 )
 
-cp -fv installScripts/dotfiles/pacman.conf /etc/
+cp -fv archConfig/dotfiles/pacman.conf /etc/
 
 echo "==> Checking for system updates..."
 sudo pacman -Syu --needed --noconfirm
