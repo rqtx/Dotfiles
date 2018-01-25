@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "==> Installing AURhelpers..."
-sh ./AURhelpers.sh
+sh ./archAURhelpers.sh
 echo "done"
 
 echo "Installing Packages..."
-sh ./installPackages.sh
+sh ./archInstallPackages.sh
 echo "done"
