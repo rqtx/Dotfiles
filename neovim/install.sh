@@ -7,8 +7,9 @@
 #   and install ncurses5-compat-libs
 #######
 
-mkdir ~/.config/nvim
-stow -t ~/.config/nvim nvim
+rm -rfv ~/.config/nvim
+mkdir -v ~/.config/nvim
+stow --verbose=2 -t ~/.config/nvim nvim
 
 ###Vim Required dirs
 mkdir -p ~/.vim/tmp/swap

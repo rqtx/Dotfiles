@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm -r ~/.config/termite
-mkdir ~/.config/termite
-stow -t ~/.config/termite/ dotfiles
+rm -rv ~/.config/termite
+mkdir -v ~/.config/termite
+stow --verbose=2 -t ~/.config/termite/ dotfiles
