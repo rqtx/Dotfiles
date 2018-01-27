@@ -11,6 +11,9 @@ rm -rfv ~/.config/nvim
 mkdir -v ~/.config/nvim
 stow --verbose=2 -t ~/.config/nvim nvim
 
+sudo rm -rfv /usr/share/nvim/runtime/ftplugin/*
+sudo stow --verbose=2 -t /usr/share/nvim/runtime runtime
+
 ###Vim Required dirs
 mkdir -p ~/.vim/tmp/swap
 mkdir -p ~/.vim/tmp/undo

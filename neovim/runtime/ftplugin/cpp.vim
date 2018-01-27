@@ -10,3 +10,6 @@ endif
 
 " Behaves just like C
 runtime! ftplugin/c.vim ftplugin/c_*.vim ftplugin/c/*.vim
+
+" Load Cpp ycm_global_ycm_extra_conf
+let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf_Cpp.py"

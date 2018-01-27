@@ -28,8 +28,33 @@ endif
 
 " Set 'comments' to format dashed lists in comments.
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal comments+=:///,://
 
-" When the matchit plugin is loaded, this makes the % command skip parens and
+" Indents are 2 spaces
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal softtabstop=2
+
+
+" And they really are spaces, *not* tabs
+setlocal expandtab
+
+let &path.="src/include"
+
+" Setup for indending
+setlocal nosmartindent
+setlocal autoindent
+
+" Load up the doxygen syntax
+let g:load_doxygen_syntax=1
+
+let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf_C.py"
+
+augroup project
+    autocmd!
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+
+    " When the matchit plugin is loaded, this makes the % command skip parens and
 " braces in comments properly.
 let b:match_words = '^\s*#\s*if\(\|def\|ndef\)\>:^\s*#\s*elif\>:^\s*#\s*else\>:^\s*#\s*endif\>'
 let b:match_skip = 's:comment\|string\|character\|special'
