@@ -23,6 +23,15 @@ setlocal omnifunc=pythoncomplete#Complete
 
 set wildignore+=*.pyc
 
+let python_highlight_all=1
+
+"Use the below highlight group when displaying bad whitespace is desired.
+highlight BadWhitespace ctermbg=red guibg=red
+
+"Setup for indending
+setlocal nosmartindent
+setlocal autoindent
+
 let b:next_toplevel='\v%$\|^(class\|def\|async def)>'
 let b:prev_toplevel='\v^(class\|def\|async def)>'
 let b:next_endtoplevel='\v%$\|\S.*\n+(def\|class)'
