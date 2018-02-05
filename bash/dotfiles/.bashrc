@@ -52,3 +52,7 @@ fi
 if test -f ~/.git-completion.bash ; then
   . ~/.git-completion.bash
 fi
+
+if [ -f ~/.bash_local_alias ]; then
+  . ~/.bash_local_alias
+fi
