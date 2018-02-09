@@ -51,6 +51,9 @@ nnoremap <C-R> :%s/\<\>//gc
 inoremap <C-R> <Esc>:%s/\<\>//gc
 vnoremap <C-R> <Esc>:%s/\<\>//gc
 
+" Keymap clear highlighting (To turn off highlighting until the next search)
+nnoremap <F3> :noh<CR>
+
 " Quickly move current line above or below
 nnoremap <C-Up><C-Up> :<c-u>execute 'move -1-'. v:count1<cr>
 nnoremap <C-Down><C-Down> :<c-u>execute 'move +'. v:count1<cr>
