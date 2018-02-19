@@ -30,10 +30,10 @@ endif
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
 setlocal comments+=:///,://
 
-" Indents are 2 spaces
-setlocal shiftwidth=2
-setlocal tabstop=2
-setlocal softtabstop=2
+" Indents are 4 spaces
+setlocal shiftwidth=4
+setlocal tabstop=8
+setlocal softtabstop=4
 
 
 " And they really are spaces, *not* tabs
@@ -42,7 +42,7 @@ setlocal expandtab
 let &path.="src/include"
 
 " Setup for indending
-setlocal nosmartindent
+setlocal smartindent
 setlocal autoindent
 
 " Load up the doxygen syntax
