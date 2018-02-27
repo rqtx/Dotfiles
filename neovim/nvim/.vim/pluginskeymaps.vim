@@ -79,7 +79,7 @@ let g:syntastic_markdown_checkers = ['textlint']
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""
-nmap <F8> :TagbarToggle<CR>
+nmap <C-O> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Stupid-EasyMotion
