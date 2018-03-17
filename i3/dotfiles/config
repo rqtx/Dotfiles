@@ -12,7 +12,8 @@ new_window pixel 1
 new_float normal
 
 #Changing the Keyboard Layout
-bindsym $mod+Shift+u exec setxkbmap us -variant intl
+bindsym $mod+Shift+i exec setxkbmap us -variant intl
+bindsym $mod+Shift+u exec setxkbmap us
 bindsym $mod+Shift+p exec setxkbmap -model abnt2 -layout br -variant abnt2
 
 # Hide borders
