@@ -48,8 +48,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins key maps
 """""""""""""""""""""""""""""""""""""""""""""""""
-if filereadable(expand("\~/.config/nvim/.vim/pluginskeymaps.vim"))
-  source \~/.config/nvim/.vim/pluginskeymaps.vim
+if filereadable(expand("\~/.config/nvim/.vim/pluginsconfig.vim"))
+  source \~/.config/nvim/.vim/pluginsconfig.vim
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""

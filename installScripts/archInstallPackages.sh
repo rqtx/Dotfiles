@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-pkgPacman=("neovim" "redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow")
+pkgPacman=("neovim" "redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang")
 for i in "${pkgPacman[@]}"
 do
   sudo pacman -S --needed $i

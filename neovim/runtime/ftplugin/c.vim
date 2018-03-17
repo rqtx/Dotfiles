@@ -21,11 +21,6 @@ let b:undo_ftplugin = "setl fo< com< ofu<"
 " and insert the comment leader when hitting <CR> or using "o".
 setlocal fo-=t fo+=croql
 
-" Set completion with CTRL-X CTRL-O to autoloaded function.
-if exists('&ofu')
-  setlocal ofu=ccomplete#Complete
-endif
-
 " Set 'comments' to format dashed lists in comments.
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
 setlocal comments+=:///,://
@@ -47,8 +42,6 @@ setlocal autoindent
 
 " Load up the doxygen syntax
 let g:load_doxygen_syntax=1
-
-let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf_C.py"
 
 augroup project
     autocmd!

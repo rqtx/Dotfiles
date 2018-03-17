@@ -18,6 +18,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'morhetz/gruvbox'
+Plug 'vim-python/python-syntax'
+Plug 'flazz/vim-colorschemes'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 """"" Common coding plugins """""
 Plug 'scrooloose/syntastic'
@@ -25,5 +30,6 @@ Plug 'majutsushi/tagbar'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
 Plug 'joequery/Stupid-EasyMotion'
 Plug 'airblade/vim-gitgutter'
+Plug 'wesleyche/SrcExpl'
 
 call plug#end()
