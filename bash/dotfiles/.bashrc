@@ -43,7 +43,9 @@ export PATH=$PATH":~/.local/bin"
 
 # Atualiza o path para ser possível acessar o comando aws, entre outros
 #export PATH=~/.local/bin:$PATH
-test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws 
+if test -f ~/.local/bin/aws ; then
+  chmod u+x ~/.local/bin/aws 
+fi
 
 if test -f ~/.bash_alias ; then
   . ~/.bash_alias
