@@ -1,3 +1,6 @@
+#General
+alias sublime="subl3 $@"
+
 #Coding
 alias fmake="sudo true && echo Compiling... &&  make -j PROFILE="'-O0'" > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
 
