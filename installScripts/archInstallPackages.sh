@@ -15,7 +15,7 @@ echo "done"
 
 echo "==> Install Packages through pacaur"
 # Check if "pacaur" is installed
-if [ ! -n "$(pacman -Qs pacaur)" ]; then
+if [ ! -n "$(pacman -Qi pacaur)" ]; then
 	sh ./AURhelpers.sh
 fi
 
