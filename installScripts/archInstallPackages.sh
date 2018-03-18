@@ -31,6 +31,7 @@ echo "done"
 echo "==> Installing extra"
 sudo pip install --upgrade pip
 sudo pip install cmakelint
+sudo pip install powerline-shell
 sudo pip install bandit
 sudo pip install jedi
 sudo npm install -g jsonlint
