@@ -17,7 +17,7 @@ sudo pacman -S binutils make gcc fakeroot --needed
 sudo pacman -S expac yajl git cower --needed
 
 # Install "pacaur" from AUR
-if [ ! -n "$(pacman -Qs pacaur)" ]; then
+if [ ! -n "$(pacman -Qi pacaur)" ]; then
     curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur
     makepkg PKGBUILD --install --needed
 fi

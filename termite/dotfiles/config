@@ -1,5 +1,5 @@
 [options]
-font             = Source Code Pro 11 
+font             = Bitstream Vera Sans Mono 
 scrollback_lines = 10000
 clickable_url    = true
 browser          = google-chrome
