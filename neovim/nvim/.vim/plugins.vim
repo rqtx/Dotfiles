@@ -31,5 +31,6 @@ Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
 Plug 'joequery/Stupid-EasyMotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'wesleyche/SrcExpl'
+Plug 'pseewald/vim-anyfold'
 
 call plug#end()
