@@ -29,21 +29,22 @@ let g:airline#extensions#tabline#show_close_button = 1
 let g:airline#extensions#tabline#close_symbol = 'X'
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline_powerline_fonts = 1
-  nmap <leader>1 <Plug>AirlineSelectTab1
-  nmap <leader>2 <Plug>AirlineSelectTab2
-  nmap <leader>3 <Plug>AirlineSelectTab3
-  nmap <leader>4 <Plug>AirlineSelectTab4
-  nmap <leader>5 <Plug>AirlineSelectTab5
-  nmap <leader>6 <Plug>AirlineSelectTab6
-  nmap <leader>7 <Plug>AirlineSelectTab7
-  nmap <leader>8 <Plug>AirlineSelectTab8
-  nmap <leader>9 <Plug>AirlineSelectTab9
-  nmap <A-]> <Plug>AirlineSelectNextTab
-  nmap <A-[> <Plug>AirlineSelectPrevTab
-  imap <A-]> <Esc><Plug>AirlineSelectNextTab
-  imap <A-[> <Esc><Plug>AirlineSelectPrevTab
-  nmap <A-TAB> <Plug>AirlineSelectNextTab
-  imap <A-TAB> <Esc><Plug>AirlineSelectNextTab
+  
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <A-]> <Plug>AirlineSelectNextTab
+nmap <A-[> <Plug>AirlineSelectPrevTab
+imap <A-]> <Esc><Plug>AirlineSelectNextTab
+imap <A-[> <Esc><Plug>AirlineSelectPrevTab
+nmap <A-TAB> <Plug>AirlineSelectNextTab
+imap <A-TAB> <Esc><Plug>AirlineSelectNextTab
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 "Vim-multiple-cursors
@@ -156,4 +157,11 @@ let g:SrcExpl_updateTagsKey = "<F12>"
 let g:SrcExpl_prevDefKey = "<F3>" 
 
 " // Set "<F4>" key for displaying the next definition in the jump list 
-let g:SrcExpl_nextDefKey = "<F4>" 
+let g:SrcExpl_nextDefKey = "<F4>"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-anyfold
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let anyfold_activate=1
+set foldlevel=1000 
+hi Folded term=NONE cterm=NONE

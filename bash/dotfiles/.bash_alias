@@ -2,6 +2,7 @@
 # General #
 ###########
 alias sublime="subl3 $@"
+alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
 
 # Colorize the ls output ##
 alias ls='ls --color=auto'
@@ -14,6 +15,7 @@ alias lh='ls -d .* --color=auto'
 
 #Coding
 alias fmake="sudo true && echo Compiling... &&  make -j PROFILE="'-O0'" > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
+alias tmake="make -C src/test/ajtest/ check PROVE_FLAGS='--timer'"
 
 # Git
 alias ghelper="echo -e '\nga   : git add                         ( adicionar arquivos à staging area )\ngc   : git commit                      ( salvar alterações )\ngca  : git commit --amend              ( alterar último commit )\ngd   : git diff -b HEAD [arquivos]     ( diff em relação ao último commit )\ngds  : git diff -b [arquivos]          ( diff em relação à staging area )\ngl   : git log --graph --pretty=format ( vizualização dos últimos commits )\ngrh  : git checkout HEAD [arquivos]    ( undo das modificações em relação ao HEAD )\ngrs  : git reset [arquivos]            ( remove da staging area, mantendo alterações )\ngru  : git checkout [arquivos]         ( undo das modificações em relação à staging area )\ngs   : git status                      ( lista quais arquivos estão dentro e fora da staging area )\n\ngr   : help dos alias relacionados ao git reset/checkout\ngnah : reset & clean\n'"
