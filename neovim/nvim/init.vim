@@ -16,7 +16,6 @@ endif
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("\~/.config/nvim/.vim/spelling.vim"))
-  "To add more skeletons edit skeletons.vim file
   source \~/.config/nvim/.vim/spelling.vim
 endif
 
@@ -24,7 +23,6 @@ endif
 " Skeletons
 """""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("\~/.config/nvim/.vim/skeletons.vim"))
-  "To add more skeletons edit skeletons.vim file
   source \~/.config/nvim/.vim/skeletons.vim
 endif
 
@@ -33,7 +31,6 @@ endif
 " Key maps
 """""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("\~/.config/nvim/.vim/keymaps.vim"))
-  "To add more key maps edit keymaps.vim file
   source \~/.config/nvim/.vim/keymaps.vim
 endif
 
@@ -41,7 +38,6 @@ endif
 "VimPlug
 """""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("\~/.config/nvim/.vim/plugins.vim"))
-  "To add more plugins edit plugins.vim file
   source \~/.config/nvim/.vim/plugins.vim
 endif
 
