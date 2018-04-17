@@ -1,9 +1,10 @@
 #General
 alias sublime="subl3 $@"
 alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
+alias galaxy="sudo mount -t cifs -o noperm //192.168.0.100/Volume_1 /home/blackbird/Galaxy/"
 
 #Coding
-alias fmake="sudo true && echo Compiling... &&  make -j PROFILE="'-O0'" > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
+alias fmake="sudo true && echo Compiling... &&  make -j3 PROFILE="'-O0'" > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
 alias tmake="make -C src/test/ajtest/ check PROVE_FLAGS='--timer'"
 
 # Git
