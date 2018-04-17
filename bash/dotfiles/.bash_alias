@@ -1,7 +1,18 @@
-#General
+###########
+# General #
+###########
 alias sublime="subl3 $@"
 alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
 alias galaxy="sudo mount -t cifs -o noperm //192.168.0.100/Volume_1 /home/blackbird/Galaxy/"
+
+# Colorize the ls output ##
+alias ls='ls --color=auto'
+
+# Use a long listing format ##
+alias ll='ls -la'
+
+# Show hidden files ##
+alias lh='ls -d .* --color=auto'
 
 #Coding
 alias fmake="sudo true && echo Compiling... &&  make -j3 PROFILE="'-O0'" > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
