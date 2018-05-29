@@ -20,7 +20,7 @@ if [ ! -n "$(pacman -Qi pacaur)" ]; then
 fi
 
 # pacaur install
-pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "ncurses5-compat-libs" "npm" "xflux")
+pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "ncurses5-compat-libs" "npm" "xflux")
 
 for i in "${pkgPacaur[@]}"
 do 
