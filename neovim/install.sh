@@ -21,7 +21,10 @@ mkdir -p ~/.vim/tmp/swap
 mkdir -p ~/.vim/tmp/undo
 mkdir -p ~/.vim/tmp/backup
 
-###install vim-plug
+###Plugins
+#Remove plugins file to force install
+rm -rfv ~/.vim/autoload/plug.vim  
+#install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
