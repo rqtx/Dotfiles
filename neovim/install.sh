@@ -10,7 +10,7 @@
 #######
 
 rm -rfv ~/.config/nvim
-mkdir -v ~/.config/nvim
+mkdir -vp ~/.config/nvim
 stow --verbose=2 -t ~/.config/nvim nvim
 
 sudo rm -rfv /usr/share/nvim/runtime/ftplugin/

@@ -34,7 +34,11 @@ colors() {
 	done
 }
 
-export PATH=$PATH":~/.local/bin"
+# Atualiza o path para ser possível acessar o comando aws, entre outros
+export PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.local/bin
+export PATH="~/.local/bin:$PATH"
+test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws
+test -x ~/.local/bin/sam || chmod u+x ~/.local/bin/sam
 
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
@@ -69,3 +73,6 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws
+export KUBECONFIG=~/.kube/config-ajudici
+source <(kubectl completion bash)
