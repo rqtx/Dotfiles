@@ -13,6 +13,7 @@ configDir=( "archConfig"
             "X"
 )
 
+sudo true
 sudo cp -fv archConfig/dotfiles/pacman.conf /etc/
 
 echo "==> Checking for system updates..."
@@ -35,7 +36,6 @@ do
   echo "Leaving directory $i"
 done
 
-echo "==> Stow"
 for i in "${configDir[@]}"
 do
   echo "Entering in directory $i"

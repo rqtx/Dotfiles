@@ -76,3 +76,5 @@ fi
 test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws
 export KUBECONFIG=~/.kube/config-ajudici
 source <(kubectl completion bash)
+
+export AWS_SAM_LOCAL=1
