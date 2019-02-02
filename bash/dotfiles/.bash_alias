@@ -4,6 +4,7 @@
 alias sublime="subl3 $@"
 alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
 alias galaxy="sudo mount -t cifs //192.168.0.100/Volume_1 /home/blackbird/Galaxy/ -o username=admin"
+alias archUpdate="~/.ArchUpdate.sh"
 
 # Colorize the ls output ##
 alias ls='ls --color=auto'

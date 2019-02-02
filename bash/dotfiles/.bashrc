@@ -78,3 +78,4 @@ export KUBECONFIG=~/.kube/config-ajudici
 source <(kubectl completion bash)
 
 export AWS_SAM_LOCAL=1
+source <(kubectl completion bash)

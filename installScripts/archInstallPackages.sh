@@ -20,7 +20,7 @@ if [ ! -n "$(pacman -Qi pacaur)" ]; then
 fi
 
 # pacaur install
-pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-shell" "ncurses5-compat-libs" "npm" "xflux")
+pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-shell" "perl-critic" "ncurses5-compat-libs" "npm" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgPacaur[@]}"
 do 
@@ -35,4 +35,5 @@ sudo pip install bandit
 sudo pip install jedi
 sudo npm install -g jsonlint
 sudo npm install -g textlint-rule-ginger
+sudo npm install -g eslint
 echo "done"
