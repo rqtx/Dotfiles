@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-pkgPacman=("neovim" "redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang")
+pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang")
 for i in "${pkgPacman[@]}"
 do
   sudo pacman -S --needed $i
@@ -20,7 +20,7 @@ if [ ! -n "$(pacman -Qi pacaur)" ]; then
 fi
 
 # pacaur install
-pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-shell" "perl-critic" "ncurses5-compat-libs" "npm" "xflux" "sass-lint" "yamllint")
+pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-shell" "perl-critic" "ncurses5-compat-libs" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgPacaur[@]}"
 do 
@@ -29,11 +29,14 @@ done
 echo "done"
 
 echo "==> Installing extra"
-sudo pip install --upgrade pip
-sudo pip install cmakelint
-sudo pip install bandit
-sudo pip install jedi
-sudo npm install -g jsonlint
-sudo npm install -g textlint-rule-ginger
-sudo npm install -g eslint
+pip install --upgrade pip --user
+pip install neovim --user
+pip install cmakelint --user
+pip install bandit --user
+pip install jedi --user
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+command -v nvm
+npm install -g jsonlint
+npm install -g textlint-rule-ginger
+npm install -g eslint
 echo "done"
