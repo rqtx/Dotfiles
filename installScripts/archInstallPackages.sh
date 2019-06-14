@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang")
+pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang" "npm")
 for i in "${pkgPacman[@]}"
 do
   sudo pacman -S --needed $i
@@ -30,12 +30,14 @@ echo "done"
 
 echo "==> Installing extra"
 pip install --upgrade pip --user
+pip install awscli --upgrade --user
 pip install neovim --user
 pip install cmakelint --user
 pip install bandit --user
 pip install jedi --user
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 command -v nvm
+nvm install 6
 npm install -g jsonlint
 npm install -g textlint-rule-ginger
 npm install -g eslint

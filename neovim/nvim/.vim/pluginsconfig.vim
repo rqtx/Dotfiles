@@ -68,7 +68,8 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_perl_checker = 1
 let g:syntastic_asm_compiler    = ['mipsel-linux-gcc']
 let g:syntastic_c_checkers      = ['cppcheck', 'gcc']
 let g:syntastic_cpp_checkers    = ['cppcheck', 'gcc']
@@ -80,6 +81,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_markdown_checkers = ['textlint']
 let g:syntastic_sass_checkers = ['sass_lint']
 let g:syntastic_yaml_checkers = ['yamllint']
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe
 """""""""""""""""""""""""""""""""""""""""""""""""

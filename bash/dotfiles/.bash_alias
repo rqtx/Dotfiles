@@ -15,13 +15,19 @@ alias ll='ls -la'
 # Show hidden files ##
 alias lh='ls -d .* --color=auto'
 
+#kubectl
+alias k="kubectl $@"
+alias getpods="kubectl get po -L primary"
+alias postgres-operator="kubectl port-forward svc/postgres-operator 8443:8443"
+alias kpf="kubectl port-forward $@"
+
 #Coding Postgres
 alias fmake="sudo true && echo Configure... && ./aj-configure.sh -a ~/ajudici/api-python-git -d > /dev/null && echo Compiling... &&  make -j3 PROFILE="'-O0'" > /dev/null && bear make > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
 alias ajtest="make -C src/test/ajudici check PROVE_FLAGS='--timer'"
 alias pgstart="sudo -u postgres /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data"
 
 # Aliases para ajudar no Git
-alias ghelper="echo -e '\n\033[3;33mga\033[0m   : \033[0;32mgit add\033[0m                         ( adicionar arquivos à staging area )\n\033[3;33mgc\033[0m   : \033[0;32mgit commit\033[0m                      ( salvar alterações )\n\033[3;33mgca\033[0m  : \033[0;32mgit commit --amend\033[0m              ( alterar último commit )\n\033[3;33mgd\033[0m   : \033[0;32mgit diff -b HEAD [arquivos]\033[0m     ( diff em relação ao último commit )\n\033[3;33mgds\033[0m  : \033[0;32mgit diff -b [arquivos]\033[0m          ( diff em relação à staging area )\n\033[3;33mgdh\033[0m  : \033[0;32mgit diff --cached [arquivos]\033[0m    ( diff da staging area em relação à HEAD )\n\033[3;33mgl\033[0m   : \033[0;32mgit log --graph --pretty=format\033[0m ( vizualização dos últimos commits )\n\033[3;33mgrh\033[0m  : \033[0;32mgit checkout HEAD [arquivos]\033[0m    ( undo das modificações em relação ao HEAD )\n\033[3;33mgrs\033[0m  : \033[0;32mgit reset [arquivos]\033[0m            ( remove da staging area, mantendo alterações )\n\033[3;33mgru\033[0m  : \033[0;32mgit checkout [arquivos]\033[0m         ( undo das modificações em relação à staging area )\n\033[3;33mgs\033[0m   : \033[0;32mgit status\033[0m                      ( lista quais arquivos estão dentro e fora da staging area )\n\n\033[3;33mgr\033[0m   : help dos alias relacionados ao git reset/checkout\n\033[3;33mgnah\033[0m : reset & clean\n\n\033[0;32mgit stash <list|pop>\033[0m         ( guarda as modificações para troca de branches - opções p/ listar e re-aplicar )\n\033[0;32mgit commit --amend --no-edit\033[0m ( adiciona staging area no último commit sem alterar msg )\n\033[0;32mgit rebase -i origin/master\033[0m  ( consolida modificações num só commit e as aplica sem merge + opção de pick/drop commits )\n\033[0;32mgit bisect <start|bad|good>\033[0m  ( modo de inspecionar códigos em busca do commit que gerou um bug )\n\n\033[0;32mgit merge [branch] --no-commit --no-ff\033[0m ( merge da branch, sem fazer o commit/fast-forward )\n\033[0;32mgit remote update origin --prune\033[0m       ( atualiza lista de branches do repositório )\n\033[0;32mgit branch --merged master | grep -v \x27^[ *]*master$\x27 | xargs git branch -d\033[0m ( deleta branches aplicadas à master )\n'"
+alias ghelper="echo -e '\n\e[3;34mga\e[0m   : \e[0;32mgit add\e[0m                         ( adicionar arquivos à staging area )\n\e[3;34mgc\e[0m   : \e[0;32mgit commit\e[0m                      ( salvar alterações )\n\e[3;34mgca\e[0m  : \e[0;32mgit commit --amend\e[0m              ( alterar último commit )\n\e[3;34mgd\e[0m   : \e[0;32mgit diff -b HEAD [arquivos]\e[0m     ( diff em relação ao último commit )\n\e[3;34mgds\e[0m  : \e[0;32mgit diff -b [arquivos]\e[0m          ( diff em relação à staging area )\n\e[3;34mgdh\e[0m  : \e[0;32mgit diff --cached [arquivos]\e[0m    ( diff da staging area em relação à HEAD )\n\e[3;34mgl\e[0m   : \e[0;32mgit log --graph --pretty=format\e[0m ( vizualização dos últimos commits )\n\e[3;34mgrh\e[0m  : \e[0;32mgit checkout HEAD [arquivos]\e[0m    ( undo das modificações em relação ao HEAD )\n\e[3;34mgrs\e[0m  : \e[0;32mgit reset [arquivos]\e[0m            ( remove da staging area, mantendo alterações )\n\e[3;34mgru\e[0m  : \e[0;32mgit checkout [arquivos]\e[0m         ( undo das modificações em relação à staging area )\n\e[3;34mgs\e[0m   : \e[0;32mgit status\e[0m                      ( lista quais arquivos estão dentro e fora da staging area )\n\n\e[3;34mglast\e[0m    : Mostra os arquivos modificados no último commit\n\e[3;34mgdeleted\e[0m : Mostra arquivos deletados (informe uma pasta ou, sem nada, é global)\n\e[3;34mgr\e[0m       : help dos alias relacionados ao git reset/checkout\n\e[3;34mgnah\e[0m     : reset & clean\n\n\e[32mgit log --follow -p -- \e[31mfile\e[0m  ( change history de um arquivo, com seus commits depois de cada diff )\n\e[32mgit checkout commit\e[34m~1\e[39m \e[31mfile\e[0m   ( restore do arquivo após a identificação do commit via gdeleted )\n\e[0;32mgit stash <list|pop>\e[0m         ( guarda as modificações para troca de branches - opções p/ listar e re-aplicar )\n\e[0;32mgit commit --amend --no-edit\e[0m ( adiciona staging area no último commit sem alterar msg )\n\e[0;32mgit rebase -i origin/master\e[0m  ( consolida modificações num só commit e as aplica sem merge + opção de pick/drop commits )\n\e[0;32mgit bisect <start|bad|good>\e[0m  ( modo de inspecionar códigos em busca do commit que gerou um bug )\n\n\e[0;32mgit merge [branch] --no-commit --no-ff\e[0m ( merge da branch, sem fazer o commit/fast-forward )\n\e[0;32mgit remote update origin --prune\e[0m       ( atualiza lista de branches do repositório )\n\e[0;32mgit branch --merged master | grep -v \x27^[ *]*master$\x27 | xargs git branch -d\e[0m ( deleta branches aplicadas à master )\n'"
 alias g="ghelper"
 alias ga="git add"
 alias gc="git commit"
@@ -30,10 +36,11 @@ alias gd="git diff -b HEAD"   # diff em relação a HEAD
 alias gdh="git diff --cached"       # diff da staging area em relação à HEAD
 alias gds="git diff -b"       # diff em relação a staging area
 alias gl="git log --graph --decorate=auto --pretty=format:'%C(yellow)%h%Creset %Cblue%cn%Creset %s%Cred%d %Cgreen%cr.%Creset'"
+alias glast="find . -type f -exec stat --format '%Y :%y %n' "{}" \; | grep -v git | sort -nr | cut -d: -f2- | head"
 alias gnah="git reset --hard && git clean -df"
 alias gr="echo -e 'grh : undo das modificações em relacao ao HEAD\ngru : undo das modificações em relacao a staging area\ngrs : remove da staging area'"
 alias grh="git checkout HEAD" # undo das modificações em relacao a HEAD
 alias grs="git reset"         # remove da staging area
 alias gru="git checkout"      # undo das modificações em relacao a staging area
 alias gs="git status"
-alias gu="git remote update origin --prune"
+alias gdeleted="git log --diff-filter=D --summary"  # http://blog.kablamo.org/2013/12/08/git-restore/
