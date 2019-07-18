@@ -34,22 +34,6 @@ colors() {
 	done
 }
 
-# Atualiza o path para ser possível acessar o comando aws, entre outros
-export PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.local/bin
-export PATH="~/.local/bin:$PATH"
-test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws
-test -x ~/.local/bin/sam || chmod u+x ~/.local/bin/sam
-
-[[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
-
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
-
-
-# Atualiza o path para ser possível acessar o comando aws, entre outros
-#export PATH=~/.local/bin:$PATH
-if test -f ~/.local/bin/aws ; then
-  chmod u+x ~/.local/bin/aws 
-fi
 
 if test -f ~/.bash_alias ; then
   . ~/.bash_alias
@@ -63,6 +47,22 @@ if [ -f ~/.bash_local_alias ]; then
   . ~/.bash_local_alias
 fi
 
+if [ -f ~/.bash_aws ]; then
+  . ~/.bash_aws
+fi
+
+if [ -f ~/.bash_kube ]; then
+  . ~/.bash_kube
+fi
+
+if [ -f ~/.bash_gcloud ]; then
+  . ~/.bash_gcloud
+fi
+
+if [ -f ~/.bash_crunchy ]; then
+  . ~/.bash_crunchy
+fi
+
 PROMPT_COMMAND=''
 
 function _update_ps1() {
@@ -72,13 +72,6 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-
-test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws
-export KUBECONFIG=~/.kube/config-ajudici
-source <(kubectl completion bash)
-
-export AWS_SAM_LOCAL=1
-source <(kubectl completion bash)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

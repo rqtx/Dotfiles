@@ -1,0 +1,2 @@
+export KUBECONFIG=~/.kube/config-main-cluster:
+source <(kubectl completion bash)
