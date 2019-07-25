@@ -25,6 +25,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 """"" Common coding plugins """""
+Plug 'leafgarland/typescript-vim'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
