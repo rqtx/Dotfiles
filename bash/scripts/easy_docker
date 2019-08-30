@@ -1,0 +1,95 @@
+#!/bin/bash
+
+easy_docker()
+{
+	[ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1
+	if [ $? -ne 0 ] ; then
+		echo -e "\e[31mPasta atual não faz parte de um repositório Git...\e[39m" >&2
+		return 1
+	fi
+
+	if [ -z "$1" ] || [ "$2" != "tag" -a "$2" != "push" ] ; then
+		echo -e "\e[31measy_docker \e[4mversion\e[24m \e[3mtag|push\e[23m\e[39m" >&2
+		return 1
+	fi
+
+	# ECR_PROFILE=ajudici
+	LOGIN=0
+	OPT=$2
+	PREFIX=aj
+	REPOSITORY=gcr.io/ajudici
+	VERSION=$1
+
+	case $(basename $(git config --get remote.origin.url)) in
+		cloud_admin-python-git)
+			IMAGES=" \
+				api/cloud-admin \
+				dev/cloud-admin \
+			"
+			;;
+
+		postgresql-c-git)
+			echo -e "\e[31mUse \e[4maj-update-images.sh\e[24m\e[23m\e[39m" >&2
+			return 1
+			;;
+
+		ml_unit-python-git)
+			IMAGES=" \
+				api/ml-unit \
+				dev/ml-unit \
+			"
+			;;
+
+		pipeline_flow-nodejs-git)
+			IMAGES=" \
+				api/pipeline-flow \
+				dev/pipeline-flow \
+			"
+			;;
+
+		ajudici.com.br-git)
+			IMAGES=" \
+				website/php-cron \
+				website/php-fpm \
+				website/php-worker \
+				website/webserver \
+			"
+			;;
+
+		*)
+			echo -e "Repositório \e[4m$(basename $(git config --get remote.origin.url))\e[24m inválido..." >&2
+			return 1
+			;;
+	esac
+
+	CURR_DIR=$(pwd -P)
+	LAST_DIR=$(cd -)
+	TOP_DIR=$(readlink -f $(git rev-parse --show-toplevel))
+	cd $TOP_DIR
+
+	if [ $OPT = "tag" ] ; then
+		docker-compose down 2>/dev/null
+	fi
+
+	for IMG in $IMAGES ; do
+		if [ $OPT = "tag" ] ; then
+			docker tag $PREFIX/$IMG:latest $REPOSITORY/$IMG:$VERSION
+		else
+			if [ -n "$ECR_PROFILE" -a $LOGIN -eq 0 ] ; then
+				$(aws ecr get-login --no-include-email --region us-east-1 --profile $ECR_PROFILE)
+				LOGIN=1
+			fi
+			docker push $REPOSITORY/$IMG:$VERSION
+		fi
+	done
+
+	if [ $OPT = "tag" ] ; then
+		docker container rm $(docker container ls -a -q) 2>/dev/null
+		docker rmi $(docker images -f dangling=true -q) 2>/dev/null
+	fi
+
+	cd $LAST_DIR
+	cd $CURR_DIR
+}
+
+easy_docker $@

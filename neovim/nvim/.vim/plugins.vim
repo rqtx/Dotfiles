@@ -25,7 +25,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 """"" Common coding plugins """""
-Plug 'leafgarland/typescript-vim'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
@@ -33,5 +32,8 @@ Plug 'joequery/Stupid-EasyMotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'wesleyche/SrcExpl'
 Plug 'pseewald/vim-anyfold'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
+""""" Typescript """""
+Plug 'leafgarland/typescript-vim'
 call plug#end()
