@@ -21,6 +21,9 @@ alias getpods="kubectl get po -L primary"
 alias postgres-operator="kubectl port-forward svc/postgres-operator 8443:8443"
 alias kpf="kubectl port-forward $@"
 
+#Terragrunt
+alias t="terragrunt $@"
+
 #Coding Postgres
 alias fmake="sudo true && echo Configure... && ./aj-configure.sh -a ~/ajudici/api-python-git -d > /dev/null && echo Compiling... &&  make -j3 PROFILE="'-O0'" > /dev/null && bear make > /dev/null && echo Installing... && sudo make install > /dev/null && echo Done."
 alias ajtest="make -C src/test/ajudici check PROVE_FLAGS='--timer'"
