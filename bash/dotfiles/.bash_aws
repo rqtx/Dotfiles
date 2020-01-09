@@ -1,5 +1,6 @@
 
 export AWS_SAM_LOCAL=1
+export AWS_PROFILE=igor
 
 # Atualiza o path para ser possível acessar o comando aws, entre outros
 if test -f ~/.local/bin/aws ; then

@@ -66,10 +66,10 @@ fi
 PROMPT_COMMAND=''
 
 function _update_ps1() {
-    PS1=$(powerline-shell $?)
+    PS1="$($GOPATH/bin/powerline-go -error $?)"
 }
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
@@ -82,4 +82,4 @@ PERL5LIB="/home/blackbird/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL
 PERL_LOCAL_LIB_ROOT="/home/blackbird/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/blackbird/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/blackbird/perl5"; export PERL_MM_OPT;
-export NODE_PATH=~/.npm-packages/lib/node_modules
+NODE_PATH=".nvm/versions/node/v10.16.0/bin/";
