@@ -18,7 +18,6 @@ alias lh='ls -d .* --color=auto'
 #kubectl
 alias k="kubectl $@"
 alias getpods="kubectl get po -L primary"
-alias postgres-operator="kubectl port-forward svc/postgres-operator 8443:8443"
 alias kpf="kubectl port-forward $@"
 
 #Terragrunt
