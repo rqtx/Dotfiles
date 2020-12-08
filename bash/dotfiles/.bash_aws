@@ -8,7 +8,7 @@ if test -f ~/.local/bin/aws ; then
 fi
 export PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.local/bin
 export PATH="~/.local/bin:$PATH"
-test -x ~/.local/bin/aws || chmod u+x ~/.local/bin/aws
+
 test -x ~/.local/bin/sam || chmod u+x ~/.local/bin/sam
 
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc

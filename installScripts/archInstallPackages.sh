@@ -9,7 +9,7 @@ echo "==> Install Packages through pacman"
 pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang" "npm")
 for i in "${pkgPacman[@]}"
 do
-  sudo pacman -S --needed $i
+  sudo pacman -S --needed --noconfirm $i
 done
 echo "done"
 
@@ -20,11 +20,11 @@ if [ ! -n "$(pacman -Qi pacaur)" ]; then
 fi
 
 # pacaur install
-pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-shell" "perl-critic" "ncurses5-compat-libs" "xflux" "sass-lint" "yamllint")
+pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgPacaur[@]}"
 do 
-  pacaur -S --needed --noedit $i 
+  pacaur -S --needed --noedit --noconfirm $i 
 done
 echo "done"
 

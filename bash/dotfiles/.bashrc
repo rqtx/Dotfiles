@@ -83,3 +83,4 @@ PERL_LOCAL_LIB_ROOT="/home/blackbird/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_L
 PERL_MB_OPT="--install_base \"/home/blackbird/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/blackbird/perl5"; export PERL_MM_OPT;
 NODE_PATH=".nvm/versions/node/v10.16.0/bin/";
+source <(kubectl completion bash)
