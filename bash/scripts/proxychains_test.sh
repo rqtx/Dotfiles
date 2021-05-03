@@ -19,7 +19,7 @@ RESET=`tput sgr0`
 PROXYIP=$(proxychains -q curl -s ifconfig.me/ip)
 CURRENTIP=$(curl -s ifconfig.me/ip)
 
-if [[ "${PROXYIP}" =~ "${CURRENTIP}" || -z "${PROXYIP}" ]]; 
+if [[ "${PROXYIP}" == "${CURRENTIP}" || -z "${PROXYIP}" ]]; 
 then
     echo "${RED}Proxychains is not working!"
     echo "${YELLOW}If you intent to use proxychains with TOR check if it's running."
