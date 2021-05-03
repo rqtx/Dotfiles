@@ -1,0 +1,3 @@
+---
+# tasks file for X
+- include: install.yml

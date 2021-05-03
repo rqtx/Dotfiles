@@ -1,0 +1,9 @@
+- name: copy git_diff_wrapper
+  copy: 
+    src: ./git_diff_wrapper
+    dest: ~/.local/bin/git_diff_wrapper
+
+- name: copy ArchUpdate
+  copy: 
+    src: ./ArchUpdate
+    dest: ~/.local/bin/ArchUpdate

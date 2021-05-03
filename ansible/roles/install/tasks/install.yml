@@ -1,0 +1,49 @@
+# Install packages
+- aur: 
+    name:
+        - acroread
+        - adobe-source-code-pro-fonts
+        - base-devel
+        - cmake
+        - clang
+        - cppcheck
+        - ctags
+        - curl
+        - deepin-screenshot
+        - firefox
+        - git
+        - google-chrome
+        - ibus
+        - npm
+        - ncurses5-compat-libs
+        - neovim
+        - python-pynvim
+        - pavucontrol
+        - p7zip
+        - python-pip
+        - python-pynvim
+        - powerline-go
+        - powerline-fonts
+        - pulseaudio
+        - qmplay2
+        - redshift
+        - sass-lint
+        - stow
+        - sublime-text-dev
+        - tmux
+        - termite
+        - veracrypt
+        - wget
+        - yamllint
+        - xclip
+        - xflux
+    state: present
+
+- name: Install pip package
+  pip:
+    name: 
+        - awscli
+        - cmakelint
+        - bandit
+        - jedi
+    extra_args: --user

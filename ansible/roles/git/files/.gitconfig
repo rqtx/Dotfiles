@@ -1,0 +1,12 @@
+[user]
+  email = igormiranda5@gmail.com
+  name = Igor Fernandes Miranda
+
+[diff]
+  external = ~/.local/bin/git_diff_wrapper
+
+[pager]
+  diff =
+
+[color]
+  ui = auto

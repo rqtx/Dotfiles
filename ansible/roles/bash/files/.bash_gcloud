@@ -1,0 +1,8 @@
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/blackbird/google-cloud-sdk/path.bash.inc' ]; then . '/home/blackbird/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/blackbird/google-cloud-sdk/completion.bash.inc' ]; then . '/home/blackbird/google-cloud-sdk/completion.bash.inc'; fi
+
+#Google Credentials
+export GOOGLE_APPLICATION_CREDENTIALS="/home/blackbird/Ajudici-GCP.json"

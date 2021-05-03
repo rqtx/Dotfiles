@@ -1,0 +1,54 @@
+# Config files
+- name: remove neovim config folder
+  file: 
+    path: ~/.config/nvim
+    state: absent 
+  
+- name: setup neovim with my config
+  copy: 
+    src: ./nvim
+    dest: ~/.config
+
+- name: remove neovim runtime/ftplugin folder
+  become: yes
+  file: 
+    path: /usr/share/nvim/runtime/ftplugin
+    state: absent 
+
+- name: setup neovim runtime with my config
+  become: yes
+  copy: 
+    src: ./runtime/ftplugin
+    dest: /usr/share/nvim/runtime
+
+# Vim Required dirs
+
+- name: Creates directory vim swap
+  file:
+    path: ~/.vim/tmp/swap
+    state: directory
+
+- name: Creates directory vim undo
+  file:
+    path: ~/.vim/tmp/undo
+    state: directory
+
+- name: Creates directory vim backup
+  file:
+    path: ~/.vim/tmp/backup
+    state: directory
+
+# Plugins
+
+- name: Remove plugins file to force install
+  file: 
+    path: ~/.vim/autoload/plug.vim 
+    state: absent 
+
+- name: Install vim-plug via curl
+  shell: curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Compile youcompliteme
+
+- name: Compile youcompliteme
+  shell: ~/.local/shared/nvim/plugged/youcompleteme/install.py --clang-completer   

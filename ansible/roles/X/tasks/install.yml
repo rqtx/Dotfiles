@@ -1,0 +1,7 @@
+- name: copy XResources
+  copy: 
+    src: ./Xresources
+    dest: ~/Xresources
+
+- name: xrdb -merge
+  shell: xrdb -merge ~/.Xresources

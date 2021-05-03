@@ -1,0 +1,12 @@
+- name: Creates directory tmux plugins
+  file:
+    path: ~/.tmux/plugins/tpm
+    state: directory
+
+- name: Install tmux plugins
+  shell: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+- name: copy tmux conf
+  copy: 
+    src: ./.tmux.conf
+    dest: ~/.tmux.conf

@@ -1,0 +1,64 @@
+- hosts: all
+  user: blackbird
+  gather_facts: no
+  pre_tasks:
+    - name: 'Update archlinux-keyring'
+      raw: 'sudo pacman -S --needed --noconfirm archlinux-keyring'
+    - name: 'Update Mirror list'
+      raw: 'sudo pacman-mirrors --method=rank'
+    - name: 'Kill gpgconf to force restart'
+      raw: 'gpgconf --kill all'
+    - name: 'Update system'
+      raw: 'sudo pacman -Suy --needed --noconfirm'
+  roles:
+  - { role: aurhelpers, install, tags: ["install_packages"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: neovim, tags: ["config neovim"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: archconfig, tags: ["config archlinux"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: bash, tags: ["config bash"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: bin, tags: ["scripts"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: compton, tags: ["compton config"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: git, tags: ["git config"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: i3, tags: ["i3 config"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: termite, tags: ["termite config"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: tmux, tags: ["tmux config"] }
+
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: X, tags: ["X config"] }

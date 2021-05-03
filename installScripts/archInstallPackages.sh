@@ -6,10 +6,10 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "ibus" "xclip" "stow" "clang" "npm")
+pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "xclip" "stow" "clang" "npm")
 for i in "${pkgPacman[@]}"
 do
-  sudo pacman -S --needed --noconfirm $i
+  sudo pacman -S --needed --noconfirm --cleanafter $i
 done
 echo "done"
 
@@ -24,7 +24,7 @@ pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-s
 
 for i in "${pkgPacaur[@]}"
 do 
-  pacaur -S --needed --noedit --noconfirm $i 
+  pacaur -S --needed --noedit --noconfirm --cleanafter $i 
 done
 echo "done"
 
@@ -37,7 +37,6 @@ pip install bandit --user
 pip install jedi --user
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 command -v nvm
-nvm install 6
 npm install -g jsonlint
 npm install -g textlint-rule-ginger
 npm install -g eslint

@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+# Script para fazer a atualizacao automatica do sistema e backups necessarios
+
+echo '# pacaur'
+pacaur -Scc
+pacaur -Syyu
+
+echo '# python'
+pip install -U pip --user > /dev/null
+for p in $(pip list --outdated --format=columns --user | sed -n '1,+1!p' | cut -d ' ' -f 1) ; do pip install -U $p --user || echo -e "Error: pip install -U $p --user" >&2 ; done
+
+echo '# perl'
+cpan-outdated | cpanm
+cpan-outdated -p | cpanm
+
+echo '# npm'
+npm -g update
