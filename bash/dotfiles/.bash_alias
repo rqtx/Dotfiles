@@ -6,8 +6,9 @@ alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
 alias galaxy="sudo mount -t cifs //192.168.0.100/Volume_1 /home/blackbird/Galaxy/ -o username=admin"
 alias archUpdate="~/.ArchUpdate.sh"
 
-# Colorize the ls output ##
+# Colorize the output ##
 alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
 # Use a long listing format ##
 alias ll='ls -lah --color=auto'
@@ -23,7 +24,7 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias docker_exec="docker exec -it $@"
 
-#kubectl
+#Kubectl
 alias k="kubectl $@"
 complete -F __start_kubectl k
 alias kpf="kubectl port-forward $@"

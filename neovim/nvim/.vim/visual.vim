@@ -7,7 +7,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gotham
+colorscheme nord
 
 " Define standard filetype
 set ffs=unix,dos,mac

@@ -17,7 +17,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Vim Airline
 """""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
-let g:airline_theme='gotham'
+let g:airline_theme='nord'
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 let g:airline#extensions#tabline#enabled = 1

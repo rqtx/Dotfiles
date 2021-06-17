@@ -16,12 +16,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
+Plug 'arcticicestudio/nord-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
-Plug 'flazz/vim-colorschemes'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 """"" Common coding plugins """""
