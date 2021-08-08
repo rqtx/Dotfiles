@@ -1,9 +1,5 @@
 - name: copy git_diff_wrapper
+  become: yes
   copy: 
     src: ./git_diff_wrapper
-    dest: ~/.local/bin/git_diff_wrapper
-
-- name: copy ArchUpdate
-  copy: 
-    src: ./ArchUpdate
-    dest: ~/.local/bin/ArchUpdate
+    dest: /usr/bin/git_diff_wrapper

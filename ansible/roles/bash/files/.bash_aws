@@ -1,18 +1,1 @@
-
-export AWS_SAM_LOCAL=1
-export AWS_PROFILE=igor
-
-# Atualiza o path para ser possível acessar o comando aws, entre outros
-if test -f ~/.local/bin/aws ; then
-  chmod u+x ~/.local/bin/aws 
-fi
-export PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.local/bin
-export PATH="~/.local/bin:$PATH"
-
-test -x ~/.local/bin/sam || chmod u+x ~/.local/bin/sam
-
-[[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
-
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
-
-
+/home/blackbird/Projetos/Dotfiles/bash/dotfiles/.bash_aws

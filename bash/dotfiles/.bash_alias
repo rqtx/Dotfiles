@@ -20,8 +20,9 @@ alias lh='ls -d .* --color=auto'
 alias myip="curl ifconfig.me/ip"
 
 #Docker
-alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_images='docker rmi $(docker images -a -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+alias docker_clean='docker_clean_ps && docker_clean_images'
 alias docker_exec="docker exec -it $@"
 
 #Kubectl

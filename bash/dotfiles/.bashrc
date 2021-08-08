@@ -29,7 +29,7 @@ fi
 PROMPT_COMMAND=''
 
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -shell bash -newline -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell bash -newline -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit,root)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then

@@ -1,3 +1,18 @@
+- name: Installing neovim dependencies
+  become: yes
+  community.general.pacman:
+    name:
+      - python-pynvim
+    state: present
+    extra_args: --needed --noconfirm
+
+- name: Installing neovim
+  become: yes
+  community.general.pacman:
+    name: neovim
+    state: present
+    extra_args: --needed --noconfirm
+
 # Config files
 - name: remove neovim config folder
   file: 
@@ -45,10 +60,5 @@
     path: ~/.vim/autoload/plug.vim 
     state: absent 
 
-- name: Install vim-plug via curl
+- name: Install vim-plug
   shell: curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Compile youcompliteme
-
-- name: Compile youcompliteme
-  shell: ~/.local/shared/nvim/plugged/youcompleteme/install.py --clang-completer   

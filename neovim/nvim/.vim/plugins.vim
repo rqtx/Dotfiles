@@ -23,6 +23,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'NoahTheDuke/vim-just'
 
 """"" Common coding plugins """""
 Plug 'scrooloose/syntastic'

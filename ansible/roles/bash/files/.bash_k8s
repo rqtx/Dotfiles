@@ -1,2 +1,1 @@
-export KUBECONFIG=~/.kube/config-main-cluster:
-source <(kubectl completion bash | sed 's|__start_kubectl kubectl|__start_kubectl ks|g')
+/home/blackbird/Projetos/Dotfiles/bash/dotfiles/.bash_k8s

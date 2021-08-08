@@ -1,3 +1,10 @@
+- name: Install git
+  become: yes
+  community.general.pacman:
+    name: git
+    state: present
+    extra_args: --needed --noconfirm
+
 - name: copy gitconfig
   copy: 
     src: ./.gitconfig
