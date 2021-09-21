@@ -48,6 +48,11 @@
   roles:
   - { role: bin, tags: ["scripts"] }
 
+- hosts: all
+  user: blackbird
+  roles:
+  - { role: docker, tags: ["docker"] }
+
 - hosts: desktop
   user: blackbird
   roles:
