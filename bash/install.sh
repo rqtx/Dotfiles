@@ -6,4 +6,3 @@ do
   rm -fv ~/"$file"
 done
 stow --verbose=2 -t ~ dotfiles
-stow --verbose=2 -t /usr/bin scripts

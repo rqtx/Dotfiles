@@ -38,7 +38,8 @@ fi
 
 if command -v tmux >/dev/null 2>&1 && [ "${DISPLAY}" ]; then
     # if not inside a tmux session, and if no session is started, start a new session
-    [ -z "${TMUX}" ] && (tmux attach || tmux) >/dev/null 2>&1
+    # [ -z "${TMUX}" ] && (tmux attach || tmux) >/dev/null 2>&1
+    [ -z "${TMUX}" ] && (tmux) >/dev/null 2>&1
 fi
 
 export NVM_DIR="$HOME/.nvm"

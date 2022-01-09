@@ -84,18 +84,6 @@ let g:syntastic_sass_checkers = ['sass_lint']
 let g:syntastic_yaml_checkers = ['yamllint']
 
 """""""""""""""""""""""""""""""""""""""""""""""""
-" YouCompleteMe
-"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ycm_log_level = 'error'
-let g:ycm_always_populate_location_list = 1 "default 0
-let g:ycm_goto_buffer_command = 'same-buffer' "[ 'same-buffer', 'horizontal-split', 'vertical-split', 'new-tab' ]
-let g:ycm_filetype_whitelist = { '*': 1 }
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_invoke_completion = '<C-/>'
-
-nnoremap <F11> :YcmForceCompileAndDiagnostics <CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-Y> :TagbarToggle<CR>

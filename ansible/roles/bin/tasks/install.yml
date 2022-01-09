@@ -1,5 +1,6 @@
 - name: copy git_diff_wrapper
   become: yes
   copy: 
-    src: ./git_diff_wrapper
-    dest: /usr/bin/git_diff_wrapper
+    src: "{{ item }}"
+    dest: ~/.local/bin/
+  with_lines: "find ./ -type f"

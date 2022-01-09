@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=("git_diff_wrapper")
+files=("git_diff_wrapper" "ArchUpdate.sh" "bluetooth_switch_profile.sh" "proxychains_test.sh")
 for file in "${files[@]}"
 do
   sudo rm -fv ~/.local/bin/"$file"
