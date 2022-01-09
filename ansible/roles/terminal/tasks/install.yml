@@ -1,0 +1,4 @@
+- name: copy termite config
+  copy: 
+    src: ./alacritty.yml
+    dest: ~/.config/alacritty/alacritty.yml

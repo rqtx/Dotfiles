@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-pkgPacman=("redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "termite" "base-devel" "cmake" "xclip" "stow" "clang" "npm")
+pkgPacman=("alacritty" "redshift" "wget" "curl" "git" "ibus" "pulseaudio" "pavucontrol" "p7zip" "tmux" "base-devel" "cmake" "xclip" "stow" "clang" "npm")
 for i in "${pkgPacman[@]}"
 do
   sudo pacman -S --needed --noconfirm --cleanafter $i
@@ -19,12 +19,12 @@ if [ ! -n "$(pacman -Qi pacaur)" ]; then
 	sh ./AURhelpers.sh
 fi
 
-# pacaur install
-pkgPacaur=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "sublime-text-dev" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "xflux" "sass-lint" "yamllint")
+# yay install
+pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "xflux" "sass-lint" "yamllint")
 
-for i in "${pkgPacaur[@]}"
+for i in "${pkgyay[@]}"
 do 
-  pacaur -S --needed --noedit --noconfirm --cleanafter $i 
+  yay -S --needed --noedit --noconfirm --cleanafter $i 
 done
 echo "done"
 

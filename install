@@ -8,7 +8,7 @@ configDir=( "archConfig"
             "git"
             "i3"
             "neovim"
-            "termite"
+            "terminal"
             "tmux"
             "X"
 )

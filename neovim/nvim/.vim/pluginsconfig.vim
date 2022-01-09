@@ -81,7 +81,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['eslint']
 let g:syntastic_markdown_checkers = ['textlint']
 let g:syntastic_sass_checkers = ['sass_lint']
-let g:syntastic_yaml_checkers = ['yamllint']
+" let g:syntastic_yaml_checkers = ['yamllint']
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar

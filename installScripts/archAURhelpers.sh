@@ -11,7 +11,7 @@ cd /tmp/pacaur_install
 
 # If you didn't install the "base-devel" group,
 # we'll need those.
-sudo pacman -S binutils make gcc fakeroot --needed
+sudo pacman -S binutils make gcc fakeroot go --needed
 
 # Install pacaur dependencies from arch repos
 sudo pacman -S expac yajl git cower --needed
@@ -24,13 +24,19 @@ if [ ! -n "$(pacman -Qi pacaur)" ]; then
     makepkg -s PKGBUILD --install --needed
 fi
 
+# Install "yay" from AUR
+if [ ! -n "$(pacman -Qi yay)" ]; then
+    curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=yay
+    makepkg -s PKGBUILD --install --needed
+fi
+
 # Clean up...
 cd ~
 rm -r /tmp/pacaur_install
 
 ##### yay install #####
-pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-cd /tmp/yay 
-makepkg -si
-cd -
+#pacman -S --needed git base-devel
+#git clone https://aur.archlinux.org/yay.git /tmp/yay
+#cd /tmp/yay 
+#makepkg -si
+#cd -
