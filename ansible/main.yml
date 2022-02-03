@@ -53,27 +53,27 @@
   roles:
   - { role: docker, tags: ["docker"] }
 
-- hosts: desktop
+- hosts: all
   user: blackbird
   roles:
   - { role: compton, tags: ["compton config", "extra"] }
 
-- hosts: desktop
+- hosts: all
   user: blackbird
   roles:
   - { role: i3, tags: ["i3 config", "extra"] }
 
-- hosts: desktop
+- hosts: all
   user: blackbird
   roles:
   - { role: terminal, tags: ["terminal config", "extra"] }
 
-- hosts: desktop
+- hosts: all
   user: blackbird
   roles:
   - { role: tmux, tags: ["tmux config", "extra"] }
 
-- hosts: desktop
+- hosts: all
   user: blackbird
   roles:
   - { role: X, tags: ["X config", "extra"] }
