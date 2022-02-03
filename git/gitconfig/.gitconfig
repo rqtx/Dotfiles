@@ -10,3 +10,5 @@
 
 [color]
   ui = auto
+[init]
+	defaultBranch = main

@@ -59,3 +59,5 @@ PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 VISUAL=nvim
 EDITOR=$VISUAL
 
+
+complete -C /usr/bin/vault vault
