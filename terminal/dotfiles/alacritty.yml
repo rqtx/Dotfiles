@@ -16,6 +16,7 @@ env:
 # Window dimensions in character columns and lines
 # (changes require restart)
 window:
+  opacity: 0.85
   dimensions:
     columns: 110
     lines: 33
@@ -26,8 +27,6 @@ window:
   padding:
     x: 0
     y: 0
-
-background_opacity: 0.85
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)

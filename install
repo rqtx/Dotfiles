@@ -10,7 +10,6 @@ configDir=( "archConfig"
             "neovim"
             "terminal"
             "tmux"
-            "X"
 )
 
 sudo true

@@ -72,8 +72,3 @@
   user: blackbird
   roles:
   - { role: tmux, tags: ["tmux config", "extra"] }
-
-- hosts: all
-  user: blackbird
-  roles:
-  - { role: X, tags: ["X config", "extra"] }
