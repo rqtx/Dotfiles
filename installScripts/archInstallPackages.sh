@@ -16,7 +16,7 @@ echo "done"
 
 echo "==> Install Packages through yay"
 # yay install
-pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "stow" "xflux" "sass-lint" "yamllint")
+pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "stow" "jslint" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgyay[@]}"
 do 
@@ -33,7 +33,5 @@ pip install bandit --user
 pip install jedi --user
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 command -v nvm
-npm install -g jsonlint
-npm install -g textlint-rule-ginger
-npm install -g eslint
+go install github.com/justjanne/powerline-go@latest
 echo "done"
