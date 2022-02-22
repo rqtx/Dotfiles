@@ -35,6 +35,7 @@ do
   echo "Leaving directory $i"
 done
 
+echo "==> System configuration"
 for i in "${configDir[@]}"
 do
   echo "Entering in directory $i"

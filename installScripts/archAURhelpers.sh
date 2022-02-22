@@ -13,17 +13,6 @@ cd /tmp/pacaur_install
 # we'll need those.
 sudo pacman -S binutils make gcc fakeroot go --needed
 
-# Install pacaur dependencies from arch repos
-sudo pacman -S expac yajl git cower --needed
-curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=auracle-git
-makepkg -s PKGBUILD --install --needed
-
-# Install "pacaur" from AUR
-if [ ! -n "$(pacman -Qi pacaur)" ]; then
-    curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur
-    makepkg -s PKGBUILD --install --needed
-fi
-
 # Install "yay" from AUR
 if [ ! -n "$(pacman -Qi yay)" ]; then
     curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=yay

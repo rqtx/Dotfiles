@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=("ArchUpdate.sh" "proxychains_test.sh")
+files=(".bashrc" ".bash_alias" ".bash_aws" ".bash_gcloud" ".bash_k8s" ".git-completion.bash" "ArchUpdate.sh" "proxychains_test.sh")
 for file in "${files[@]}"
 do
   rm -fv ~/"$file"

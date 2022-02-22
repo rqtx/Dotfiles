@@ -13,14 +13,9 @@ do
 done
 echo "done"
 
-echo "==> Install Packages through pacaur"
-# Check if "pacaur" is installed
-if [ ! -n "$(pacman -Qi pacaur)" ]; then
-	sh ./AURhelpers.sh
-fi
-
+echo "==> Install Packages through yay"
 # yay install
-pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "xflux" "sass-lint" "yamllint")
+pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "stow" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgyay[@]}"
 do 
