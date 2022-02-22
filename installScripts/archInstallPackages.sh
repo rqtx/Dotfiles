@@ -7,6 +7,7 @@ echo "done"
 
 echo "==> Install Packages through pacman"
 pkgPacman=("alacritty" "redshift" "wget" "curl" "git" "ibus" "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "pavucontrol" "p7zip" "tmux" "base-devel" "cmake" "xclip" "stow" "clang" "neovim " "npm")
+
 for i in "${pkgPacman[@]}"
 do
   sudo pacman -S --needed --noconfirm $i
@@ -19,7 +20,7 @@ pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-scre
 
 for i in "${pkgyay[@]}"
 do 
-  yay -S --needed --noedit --noconfirm $i 
+  yay -S --needed --answerclean=All --nodiffmenu --noconfirm $i 
 done
 echo "done"
 
