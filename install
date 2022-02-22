@@ -13,6 +13,7 @@ configDir=( "archConfig"
 )
 
 sudo true
+sudo rmmod pcspkr # Disable speaker beep
 sudo cp -fv archConfig/dotfiles/pacman.conf /etc/
 
 echo "==> Checking for system updates..."
