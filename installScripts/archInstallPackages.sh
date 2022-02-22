@@ -16,7 +16,7 @@ echo "done"
 
 echo "==> Install Packages through yay"
 # yay install
-pkgyay=("acroread" "adobe-source-code-pro-fonts" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "stow" "jslint" "xflux" "sass-lint" "yamllint")
+pkgyay=("acroread" "adobe-source-code-pro-fonts" "bash-completion" "cppcheck" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "stow" "jslint" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgyay[@]}"
 do 
