@@ -1,5 +1,5 @@
 format = """
-[](#5E81AC)\
+[█](#5E81AC)\
 $username\
 [](fg:#5E81AC bg:#8FBCBB)\
 $directory\
@@ -10,7 +10,9 @@ $git_status\
 $c\
 $golang\
 $rust\
-[](fg:#5E81AC bg:#33658A)\
+[](fg:#5E81AC bg:#123786)\
+$kubernetes\
+[](fg:#123786 bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
 $line_break\
@@ -68,6 +70,12 @@ format = '[[ $symbol ($version) ](bg:#81A1C1)]($style)'
 symbol = ""
 style = "bg:#81A1C1"
 format = '[[ $symbol ($version) ](bg:#81A1C1)]($style)'
+
+[kubernetes]
+disabled = false
+symbol = "☸︎"
+style = "bg:#123786"
+format = '[[ $symbol $context(\($namespace\))](bg:#123786)]($style)'
 
 [time]
 disabled = false
