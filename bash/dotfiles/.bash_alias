@@ -6,6 +6,7 @@ alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
 alias galaxy="sudo mount -t cifs //192.168.0.100/Volume_1 /home/blackbird/Galaxy/ -o username=admin"
 alias archUpdate="~/.ArchUpdate.sh"
 alias disk_usage="sudo du -h / | grep '^\s*[0-9\.]\+G'"
+alias vim="nvim"
 
 # Colorize the output ##
 alias ls='ls --color=auto'
@@ -44,3 +45,4 @@ alias grs="git reset"         # remove da staging area
 alias gru="git checkout"      # undo das modificações em relacao a staging area
 alias gs="git status"
 alias gdeleted="git log --diff-filter=D --summary"  # http://blog.kablamo.org/2013/12/08/git-restore/
+alias gprune="git fetch --prune" # remove any remote-tracking references that no longer exist on the remote

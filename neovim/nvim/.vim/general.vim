@@ -3,7 +3,7 @@
 " Maintained by:  Igor Fernandes Miranda <igormiranda5@gmail.com>          
 
 
-let mapleader = "-"
+let mapleader = ";"
 
 " Use the OS clipboard by default
 set clipboard=unnamed

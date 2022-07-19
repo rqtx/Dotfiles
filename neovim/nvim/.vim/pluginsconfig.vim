@@ -157,6 +157,5 @@ let g:SrcExpl_nextDefKey = "<F4>"
 """""""""""""""""""""""""""""""""""""""""""""""""
 " vim-anyfold
 """""""""""""""""""""""""""""""""""""""""""""""""
-let anyfold_activate=1
 set foldlevel=1000 
 hi Folded term=NONE cterm=NONE
