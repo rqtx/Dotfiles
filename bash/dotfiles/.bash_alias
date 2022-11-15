@@ -3,7 +3,7 @@
 ###########
 alias sublime="subl3 $@"
 alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
-alias galaxy="sudo mount -t cifs //192.168.0.100/Volume_1 /home/blackbird/Galaxy/ -o username=admin"
+alias galaxy="sudo mount -t nfs 192.168.0.100:/mnt/md0 /mnt/galaxy"
 alias archUpdate="~/.ArchUpdate.sh"
 alias disk_usage="sudo du -h / | grep '^\s*[0-9\.]\+G'"
 alias vim="nvim"
@@ -25,6 +25,7 @@ alias myip="curl ifconfig.me/ip"
 alias docker_clean_images='docker rmi $(docker images -a -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias docker_clean='docker_clean_ps && docker_clean_images'
+alias docker_prune='docker system prune --volumes --all'
 alias docker_exec="docker exec -it $@"
 
 # Aliases para ajudar no Git
