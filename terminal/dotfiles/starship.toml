@@ -69,7 +69,7 @@ format = '[[ $symbol ($version) ](bg:#81A1C1)]($style)'
 [rust]
 symbol = ""
 style = "bg:#81A1C1"
-format = '[[ $symbol ($version) ](bg:#81A1C1)]($style)'
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
 
 [kubernetes]
 disabled = false
