@@ -6,7 +6,7 @@ echo "	-> ncurses5-compat-libs GPG key added"
 echo "done"
 
 echo "==> Install Packages through pacman"
-pkgPacman=("alacritty" "redshift" "wget" "curl" "git" "ibus" "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "pavucontrol" "p7zip" "tmux" "base-devel" "cmake" "xclip" "stow" "clang" "neovim " "npm" "starship" "just")
+pkgPacman=("alacritty" "redshift" "wget" "curl" "git" "ibus" "manjaro-pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "pavucontrol" "p7zip" "tmux" "base-devel" "cmake" "xclip" "stow" "clang" "neovim " "npm" "starship" "just")
 
 for i in "${pkgPacman[@]}"
 do
