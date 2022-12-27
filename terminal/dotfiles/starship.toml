@@ -21,7 +21,7 @@ format = '[$user ]($style)'
 
 [directory]
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 1
 truncation_symbol = "…/"
 
 # Here is how you can shorten some long paths by text replacement
@@ -43,10 +43,17 @@ format = '\[[ $symbol ($version) ]($style)\]'
 
 [git_branch]
 symbol = ""
-format = '\[[ $symbol $branch ]($style)'
+format = '\[[ $symbol $branch]($style)'
 
 [git_status]
-format = '[($all_status$ahead_behind )]($style)\]'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+conflicted = '🏳'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+stashed = '📦'
+staged = '[++\($count\)](green)'
+deleted = '🗑'
+format = '[ ($all_status$ahead_behind )]($style)\]'
 
 [golang]
 symbol = " "
@@ -64,7 +71,7 @@ format = '\[[ $symbol $context(\($namespace\))]($style)\]'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-format = '\[[  $time ]($style)\]'
+format = '[  $time ]($style)'
 
 [character]
 success_symbol = "[❯](bold green) "
