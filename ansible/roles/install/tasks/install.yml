@@ -12,6 +12,7 @@
         - ctags
         - curl
         - docker
+        - podman
         - ibus
         - npm
         - ncurses5-compat-libs
