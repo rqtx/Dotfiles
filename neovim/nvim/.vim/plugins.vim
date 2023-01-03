@@ -30,7 +30,6 @@ Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'joequery/Stupid-EasyMotion'
 Plug 'airblade/vim-gitgutter'
-Plug 'wesleyche/SrcExpl'
 Plug 'pseewald/vim-anyfold'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 

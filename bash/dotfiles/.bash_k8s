@@ -1,5 +1,8 @@
 alias k="kubectl"
 source <(kubectl completion bash | sed 's|__start_kubectl kubectl|__start_kubectl ks|g')
 complete -F __start_kubectl k
-alias kpf="kubectl port-forward $@"
-alias ephemeral=" k run --restart=Never -it --rm -n $@ --image=$@ $@ bash"
+
+alias kubesec="docker run -i kubesec/kubesec:v2.12.0 scan /dev/stdin < $@"
+
+# https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
