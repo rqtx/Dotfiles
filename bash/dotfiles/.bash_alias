@@ -8,6 +8,8 @@ alias archUpdate="~/.ArchUpdate.sh"
 alias disk_usage="sudo du -h / | grep '^\s*[0-9\.]\+G'"
 alias vim="nvim"
 alias btop="bpytop"
+alias xc="xclip -selection clipboard"
+
 # Colorize the output ##
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'

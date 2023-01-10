@@ -43,3 +43,4 @@ EDITOR=$VISUAL
 complete -C /usr/bin/vault vault
 
 export DOCKER_BUILDKIT=1
+export GPG_TTY=$(tty)
