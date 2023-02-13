@@ -1,5 +1,0 @@
-- name: Arch pacman config
-  become: yes
-  copy: 
-    src: ./pacman.conf
-    dest: /etc/pacman.conf

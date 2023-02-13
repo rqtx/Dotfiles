@@ -1,3 +1,0 @@
----
-# tasks file for roles/docker
-- include: install.yml

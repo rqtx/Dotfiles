@@ -1,3 +1,0 @@
----
-# tasks file for bash
-- include: install.yml

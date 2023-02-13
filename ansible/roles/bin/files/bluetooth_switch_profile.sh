@@ -1,1 +1,0 @@
-local/bluetooth_switch_profile.sh

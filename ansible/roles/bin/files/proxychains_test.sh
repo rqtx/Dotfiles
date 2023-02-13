@@ -1,1 +1,0 @@
-local/proxychains_test.sh
