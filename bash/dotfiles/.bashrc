@@ -44,3 +44,5 @@ complete -C /usr/bin/vault vault
 
 export DOCKER_BUILDKIT=1
 export GPG_TTY=$(tty)
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

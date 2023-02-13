@@ -7,7 +7,7 @@ alias galaxy="sudo mount -t nfs 192.168.0.100:/mnt/md0 /mnt/galaxy"
 alias archUpdate="~/.ArchUpdate.sh"
 alias disk_usage="sudo du -h / | grep '^\s*[0-9\.]\+G'"
 alias vim="nvim"
-alias btop="bpytop"
+alias bptop="bpytop"
 alias xc="xclip -selection clipboard"
 
 # Colorize the output ##

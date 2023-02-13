@@ -1,0 +1,28 @@
+AddKeysToAgent  yes
+
+Host github.com
+  Hostname github.com
+  User rqtx
+  PreferredAuthentications publickey
+  IdentityFile /home/blackbird/.ssh/spitfire
+
+Host master01
+  Hostname master01
+  User blackbird
+  port 22
+  PreferredAuthentications publickey
+  IdentityFile /home/blackbird/.ssh/akira
+
+Host worker01
+  Hostname worker01
+  User blackbird
+  port 22
+  PreferredAuthentications publickey
+  IdentityFile /home/blackbird/.ssh/akira
+
+Host worker02
+  Hostname worker02
+  User blackbird
+  port 22
+  PreferredAuthentications publickey
+  IdentityFile /home/blackbird/.ssh/akira

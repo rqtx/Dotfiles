@@ -9,6 +9,7 @@ configDir=( "archConfig"
             "git"
             "i3"
             "neovim"
+            "ssh"
             "terminal"
             "tmux"
 )

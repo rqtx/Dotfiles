@@ -1,19 +1,18 @@
 [user]
-	email = rqtx@protonmail.com
+  email = rqtx@protonmail.com
   name = Igor Fernandes Miranda
-	signingkey = 23B283FE5B23B65B
-
+  signingkey = 23B283FE5B23B65B
 [diff]
   external = ~/.local/bin/git_diff_wrapper
-
 [pager]
   diff =
-
 [color]
   ui = auto
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
-	rebase = false
+  rebase = false
 [commit]
-	gpgsign = true
+  gpgsign = true
+[credential]
+  helper = libsecret
