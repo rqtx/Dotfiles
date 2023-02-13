@@ -1,0 +1,4 @@
+- name: copy i3 config
+  copy: 
+    src: ./config
+    dest: ~/.i3/config

@@ -1,0 +1,3 @@
+---
+# tasks file for i3
+- include: install.yml

@@ -1,0 +1,3 @@
+---
+# tasks file for compton
+- include: install.yml

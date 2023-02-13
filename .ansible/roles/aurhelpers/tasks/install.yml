@@ -1,0 +1,28 @@
+
+- name: Installing yay dependencies
+  become: yes
+  community.general.pacman:
+    name: 
+      - gcc
+      - make
+      - go
+      - fakeroot
+    state: present
+    extra_args: --needed --noconfirm
+
+#- aur:
+#    name: Installing yay
+#    use: makepkg
+#    name:
+#      - yay
+#    state: present
+#    extra_args: --needed --noconfirm
+
+- name: Installing yay
+  become: yes
+  community.general.pacman:
+    name: 
+      - yay
+    state: present
+    extra_args: --needed --noconfirm
+

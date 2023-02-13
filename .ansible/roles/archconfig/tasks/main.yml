@@ -1,0 +1,3 @@
+---
+# tasks file for archconfig
+- include: install.yml

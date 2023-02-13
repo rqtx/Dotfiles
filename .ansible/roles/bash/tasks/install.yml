@@ -1,0 +1,30 @@
+---
+- name: copy bash alias
+  copy:
+    src: ./.bash_alias
+    dest: ~/.bash_alias
+
+- name: copy bash aws
+  copy:
+    src: ./.bash_aws
+    dest: ~/.bash_aws
+
+- name: copy bash gcloud
+  copy:
+    src: ./.bash_gcloud
+    dest: ~/.bash_gcloud
+
+- name: copy bash k8s
+  copy:
+    src: ./.bash_k8s
+    dest: ~/.bash_k8s
+
+- name: copy bashrc
+  copy:
+    src: ./.bashrc
+    dest: ~/.bashrc
+
+- name: copy git-complerion
+  copy:
+    src: ./.git-completion.bash
+    dest: ~/.git-completion.bash

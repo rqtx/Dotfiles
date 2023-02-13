@@ -1,0 +1,4 @@
+- name: copy compton.conf
+  copy: 
+    src: ./compton.conf
+    dest: ~/.config/compton.conf

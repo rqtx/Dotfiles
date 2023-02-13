@@ -1,0 +1,65 @@
+# Install default packages
+- name: Installing basic packages
+  become: yes
+  community.general.pacman:
+    executable: yay
+    state: present
+    name:
+        - base-devel
+        - cmake
+        - clang
+        - cppcheck
+        - ctags
+        - curl
+        - docker
+        - podman
+        - ibus
+        - npm
+        - ncurses5-compat-libs
+        - p7zip
+        - python-pip
+        - powerline-go
+        - powerline-fonts
+        - sass-lint
+        - stow
+        - wget
+        - yamllint
+    extra_args: --needed --noconfirm
+
+- name: Install pip package
+  pip:
+    name: 
+        - cmakelint
+        - bandit
+        - jedi
+    extra_args: --user
+
+# Install extra packages
+- name: Installing extra packages
+  become: yes
+  community.general.pacman:
+    executable: yay
+    state: present
+    name:
+        - acroread
+        - adobe-source-code-pro-fonts
+        - deepin-screenshot
+        - firefox
+        - google-chrome
+        - pulseaudio
+        - qmplay2
+        - redshift
+        - tmux
+        - termite
+        - veracrypt
+        - xclip
+        - xflux
+    extra_args: --needed --noconfirm
+  tags: extra
+
+- name: Install pip package
+  pip:
+    name: 
+        - awscli
+    extra_args: --user
+  tags: extra
