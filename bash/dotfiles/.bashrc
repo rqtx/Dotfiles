@@ -39,6 +39,7 @@ PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 VISUAL=nvim
 EDITOR=$VISUAL
+BROWSER=/usr/bin/google-chrome-stable
 
 complete -C /usr/bin/vault vault
 

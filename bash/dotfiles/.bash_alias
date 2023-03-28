@@ -1,7 +1,6 @@
 ###########
 # General #
 ###########
-alias sublime="subl3 $@"
 alias xflux_br="xflux -l -15.7797200 -g -47.9297200"
 alias galaxy="sudo mount -t nfs 192.168.0.100:/mnt/md0 /mnt/galaxy"
 alias archUpdate="~/.ArchUpdate.sh"
