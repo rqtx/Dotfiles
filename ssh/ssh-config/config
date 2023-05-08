@@ -6,6 +6,13 @@ Host github.com
   PreferredAuthentications publickey
   IdentityFile /home/blackbird/.ssh/spitfire
 
+# GitLab.com
+Host gitlab.com
+  Hostname gitlab.com
+  USer rqtx
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/spitfire
+
 Host master01
   Hostname master01
   User blackbird
