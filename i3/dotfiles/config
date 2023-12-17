@@ -37,16 +37,23 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec terminator
 
 # Switch between bluetooth profiles
+# %%hotkey: Switch between bluetooth profile %%
 bindsym $mod+Shift+F12 exec bluetooth_switch_profile.sh
 
 # kill focused window
+# %%hotkey: Focused window %%
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+# %%hotkey: Start program launcher (ulauncher) %%
+bindsym $mod+d exec --no-startup-id ulauncher
 
 # launch categorized menu
+# %%hotkey: Launch categorized menu %%
 bindsym $mod+z exec --no-startup-id morc_menu
+
+# %%hotkey: Launch dmenu_hotkeys %%
+bindsym $mod+a exec --no-startup-id /home/blackbird/.dmenu-hotkeys/bin/dmenu_hotkeys run --menu rofi --app i3
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -117,6 +124,7 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
+# %%hotkey: toggle fullscreen mode for the focused container %%
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -134,7 +142,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -144,23 +152,30 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 #navigate workspaces next / previous
+# %%hotkey: Navigate workspaces next %%
 bindsym $mod+Ctrl+Right workspace next
+# %%hotkey: Navigate workspaces previous %%
 bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
+#set $monitor_0 "HDMI-0"
+#set $monitor_1 "DP-2"
+
+set $ws1 "1:  Terminal"
+set $ws2 "2:󰊯  Chrome"   
+set $ws3 "3:  Firefox"  
+set $ws4 "4:  Brave"    
+set $ws5 "5:  Obsidian" 
 set $ws6 6
 set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10
+
+#exec --no-startup-id i3-msg 'workspace $ws1; exec alacritty'
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -237,6 +252,7 @@ for_window [class="Xfburn"] floating enable
 for_window [urgent=latest] focus
 
 # reload the configuration file
+# %%hotkey: Reload i3 configuration file %%
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -246,6 +262,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
+# %%hotkey: Set shut down, restart and locking features %%
 bindsym $mod+Shift+F1 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
@@ -287,6 +304,7 @@ mode "resize" {
 }
 
 # Lock screen
+# %%hotkey: Lock screen %%
 bindsym $mod+Shift+F2 exec --no-startup-id blurlock
 
 # Autostart applications
@@ -364,7 +382,7 @@ set $i3_color17         #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	status_command i3status
+	status_command i3status -c /home/blackbird/.config/i3/i3status.conf
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'

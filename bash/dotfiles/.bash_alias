@@ -8,6 +8,7 @@ alias disk_usage="sudo du -h / | grep '^\s*[0-9\.]\+G'"
 alias vim="nvim"
 alias bptop="bpytop"
 alias xc="xclip -selection clipboard"
+alias cilium="cilium-cli"
 
 # Colorize the output ##
 alias ls='ls --color=auto'

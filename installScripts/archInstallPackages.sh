@@ -1,12 +1,7 @@
 #!/bin/bash
 
-echo "==> Adding GPG keys"
-gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
-echo "	-> ncurses5-compat-libs GPG key added"
-echo "done"
-
 echo "==> Install Packages through pacman"
-pkgPacman=("alacritty" "redshift" "docker" "wget" "curl" "git" "ibus" "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "pavucontrol" "podman" "p7zip" "tmux" "base-devel" "cmake" "xclip" "stow" "clang" "neovim " "npm" "starship" "just")
+pkgPacman=("alacritty" "redshift" "docker" "wget" "curl" "git" "ibus" "pipewire" "pipewire-alsa" "pipewire-pulse" "pavucontrol" "podman" "p7zip" "tmux" "base-devel" "cmake" "xclip" "stow" "clang" "neovim " "npm" "starship" "just" "ttf-font-awesome")
 
 for i in "${pkgPacman[@]}"
 do
@@ -16,7 +11,7 @@ echo "done"
 
 echo "==> Install Packages through yay"
 # yay install
-pkgyay=("acroread" "adobe-source-code-pro-fonts" "aws-cli" "bash-completion" "cppcheck" "code" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "ncurses5-compat-libs" "stow" "timeshift" "jslint" "xflux" "sass-lint" "yamllint")
+pkgyay=("adobe-source-code-pro-fonts" "aws-cli" "bash-completion" "brave-bin" "cppcheck" "code" "ctags" "deepin-screenshot" "firefox" "google-chrome" "veracrypt" "virt-manager" "kompare-git" "qmplay2" "python-pip" "powerline-go" "perl-critic" "stow" "timeshift" "jslint" "xflux" "sass-lint" "yamllint")
 
 for i in "${pkgyay[@]}"
 do 
@@ -26,10 +21,5 @@ echo "done"
 
 echo "==> Installing extra"
 pip install --upgrade pip --user
-pip install neovim --user
 pip install cmakelint --user
-pip install bandit --user
-pip install jedi --user
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-command -v nvm
 echo "done"

@@ -27,8 +27,8 @@ Host worker01
   PreferredAuthentications publickey
   IdentityFile /home/blackbird/.ssh/akira
 
-Host worker02
-  Hostname worker02
+Host souyz
+  Hostname souyz
   User blackbird
   port 22
   PreferredAuthentications publickey

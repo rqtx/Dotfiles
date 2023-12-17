@@ -14,12 +14,10 @@ configDir=( "archConfig"
             "tmux"
 )
 
-sudo true
-sudo rmmod pcspkr # Disable speaker beep
 sudo cp -fv archConfig/dotfiles/pacman.conf /etc/
 
 echo "==> Checking for system updates..."
-sudo pacman -Syu --needed --noconfirm
+sudo pacman -Syyu --noconfirm
 
 echo "==> Updating Mirror list..."
 sudo pacman-mirrors --method=rank
