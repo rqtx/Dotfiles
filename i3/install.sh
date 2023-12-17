@@ -5,4 +5,7 @@ for file in "${files[@]}"
 do
   rm -fv ~/.i3/"$file"
 done
-stow --verbose=2 -t ~/.i3/ dotfiles
+
+mkdir -p ~/.config/i3;
+stow --verbose=2 -t ~/.config/i3 i3statusbar
+stow --verbose=2 -t ~/.i3/ i3-config

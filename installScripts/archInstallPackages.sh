@@ -18,8 +18,3 @@ do
   yay -S --needed --answerclean=All --nodiffmenu --noconfirm $i 
 done
 echo "done"
-
-echo "==> Installing extra"
-pip install --upgrade pip --user
-pip install cmakelint --user
-echo "done"
