@@ -167,7 +167,7 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 "1:  Terminal"
 set $ws2 "2:󰊯  Chrome"   
 set $ws3 "3:  Firefox"  
-set $ws4 "4:  Brave"    
+set $ws4 "4: Brave"    
 set $ws5 "5:  Obsidian" 
 set $ws6 6
 set $ws7 7
