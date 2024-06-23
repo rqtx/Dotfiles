@@ -9,6 +9,7 @@ alias vim="nvim"
 alias bptop="bpytop"
 alias xc="xclip -selection clipboard"
 alias cilium="cilium-cli"
+alias code="code-oss"
 
 # Colorize the output ##
 alias ls='ls --color=auto'

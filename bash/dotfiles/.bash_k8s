@@ -1,4 +1,9 @@
 alias k="kubectl"
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias kc='kubectl create'
+alias kd='kubectl delete'
+
 source <(kubectl completion bash | sed 's|__start_kubectl kubectl|__start_kubectl ks|g')
 complete -F __start_kubectl k
 
