@@ -14,18 +14,20 @@ cd /tmp/pacaur_install
 sudo pacman -S binutils make gcc fakeroot go --needed
 
 # Install "yay" from AUR
+#if [ ! -n "$(pacman -Qi yay)" ]; then
+#    curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=yay
+#    makepkg -s PKGBUILD --install --needed
+#fi
+
+##### yay install #####
 if [ ! -n "$(pacman -Qi yay)" ]; then
-    curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=yay
-    makepkg -s PKGBUILD --install --needed
+    pacman -S --needed git base-devel
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    cd /tmp/yay 
+    makepkg -si
+cd -
 fi
 
 # Clean up...
 cd ~
 rm -r /tmp/pacaur_install
-
-##### yay install #####
-#pacman -S --needed git base-devel
-#git clone https://aur.archlinux.org/yay.git /tmp/yay
-#cd /tmp/yay 
-#makepkg -si
-#cd -
